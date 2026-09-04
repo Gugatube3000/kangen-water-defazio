@@ -20,7 +20,7 @@ export function ChapterTransition({
   return (
     <section
       aria-label={`Introduction to ${next}`}
-      className="relative overflow-hidden px-5 py-12 sm:py-16 md:px-10 md:py-20 lg:px-16"
+      className="relative hidden overflow-hidden px-5 py-12 sm:py-16 md:block md:px-10 md:py-20 lg:px-16"
     >
       <div
         aria-hidden

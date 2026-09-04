@@ -77,7 +77,7 @@ function ModuleVisual({ index }: { index: number }) {
 export default function Library() {
   return (
     <>
-      <section className="pt-40 pb-12 md:pt-48 md:pb-16">
+      <section className="pb-8 pt-28 md:pb-16 md:pt-48">
         <div className="mx-auto max-w-7xl px-5 md:px-10 lg:px-16">
           <SectionHeading
             kicker="Educational Library"
@@ -94,8 +94,8 @@ export default function Library() {
 
       <section className="section-pad pt-0">
         <div className="mx-auto max-w-7xl">
-          <Reveal className="mb-12 min-w-0">
-            <div className="grid min-w-0 gap-5 md:grid-cols-3">
+          <Reveal className="mb-10 min-w-0 md:mb-12">
+            <div className="mobile-snap-row grid min-w-0 gap-5 md:grid-cols-3">
               {startHereCards.map((card) => (
                 <a
                   key={card.title}
@@ -106,7 +106,7 @@ export default function Library() {
                       ? "noopener noreferrer"
                       : undefined
                   }
-                  className="group flex min-h-[14rem] min-w-0 flex-col rounded-lg border border-white/[0.1] bg-white/[0.045] p-5 shadow-glass backdrop-blur-2xl transition duration-300 hover:-translate-y-1 hover:border-aqua-300/35 hover:bg-aqua-300/[0.07]"
+                  className="group flex min-h-[12rem] min-w-0 flex-col rounded-lg border border-white/[0.1] bg-white/[0.045] p-5 shadow-glass backdrop-blur-2xl transition duration-300 hover:-translate-y-1 hover:border-aqua-300/35 hover:bg-aqua-300/[0.07] md:min-h-[14rem]"
                 >
                   <div className="text-[10px] uppercase tracking-ultra text-aqua-300/80">
                     Start here
@@ -140,7 +140,7 @@ export default function Library() {
             </div>
           </div>
 
-          <div className="mb-14 grid min-w-0 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+          <div className="mobile-snap-row mb-10 grid min-w-0 gap-4 sm:grid-cols-2 md:mb-14 lg:grid-cols-3">
             {publicDeckSlides.map((slide, index) => (
               <Reveal
                 key={slide.number}
@@ -191,7 +191,7 @@ export default function Library() {
             </PremiumButton>
           </div>
 
-          <div className="mb-14 grid min-w-0 gap-5 lg:grid-cols-2">
+          <div className="mobile-snap-row mb-10 grid min-w-0 gap-5 md:mb-14 lg:grid-cols-2">
             {moduleScriptDrafts.map((module, index) => (
               <Reveal
                 key={module.title}
@@ -259,7 +259,7 @@ export default function Library() {
             </p>
           </div>
 
-          <div className="mb-14 grid min-w-0 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+          <div className="mobile-snap-row mb-10 grid min-w-0 gap-4 sm:grid-cols-2 md:mb-14 lg:grid-cols-4">
             {moduleOneStoryboardFrames.map((frame, index) => (
               <Reveal
                 key={frame.number}
@@ -340,7 +340,7 @@ export default function Library() {
             </p>
           </div>
 
-          <div className="grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+          <div className="mobile-snap-row grid gap-5 md:grid-cols-2 xl:grid-cols-3">
             {publicSources.map((item, index) => (
               <Reveal
                 key={item.title}

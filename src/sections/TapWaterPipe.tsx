@@ -624,7 +624,7 @@ function PipeVideo({
               key={c.name}
               type="button"
               onClick={() => setActiveContaminant(c)}
-              className={`absolute rounded-full border px-2.5 py-1 text-[10px] tracking-ultra uppercase backdrop-blur-sm transition-all duration-300 z-10 ${
+              className={`absolute z-10 min-h-9 rounded-full border px-3 py-2 text-[11px] uppercase tracking-ultra backdrop-blur-sm transition-all duration-300 ${
                 isActive
                   ? "border-aqua-400 bg-navy-900 text-aqua-200 shadow-[0_0_12px_rgba(164,231,240,0.35)] scale-105 font-bold"
                   : "border-white/15 bg-navy-950/55 text-silver-200 hover:border-white/30 hover:bg-navy-950/70"
@@ -656,7 +656,7 @@ function PipeVideo({
               key={c.name}
               type="button"
               onClick={() => setActiveContaminant(c)}
-              className={`flex items-center gap-2 text-[10px] uppercase tracking-ultra text-left p-1.5 rounded-xl transition ${
+              className={`flex min-h-11 items-center gap-2 rounded-xl p-2 text-left text-[11px] uppercase tracking-ultra transition ${
                 isActive
                   ? "bg-white/[0.06] ring-1 ring-white/10"
                   : "hover:bg-white/[0.02]"

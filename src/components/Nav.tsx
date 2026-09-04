@@ -10,6 +10,7 @@ const NAV = [
   { to: "/science", label: "Science" },
   { to: "/solution", label: "Solution" },
   { to: "/doctor", label: "Dr. De Fazio" },
+  { to: "/library", label: "Library", desktop: false },
   { to: "/qa", label: "Q&A", desktop: false },
   { to: "/references", label: "References", desktop: false },
   { to: "/stories", label: "Stories", desktop: false },
@@ -29,6 +30,15 @@ export function Nav() {
   }, []);
 
   useEffect(() => setOpen(false), [location.pathname]);
+
+  useEffect(() => {
+    if (!open) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [open]);
 
   return (
     <header
@@ -103,6 +113,8 @@ export function Nav() {
           <button
             type="button"
             aria-label="Menu"
+            aria-expanded={open}
+            aria-controls="mobile-navigation"
             onClick={() => setOpen((s) => !s)}
             className="lg:hidden h-10 w-10 rounded-full glass flex items-center justify-center"
           >
@@ -133,6 +145,7 @@ export function Nav() {
       <AnimatePresence>
         {open && (
           <motion.div
+            id="mobile-navigation"
             initial={{ opacity: 0, y: -8 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -8 }}
@@ -140,7 +153,7 @@ export function Nav() {
             className="lg:hidden mx-5 mt-3 glass max-h-[calc(100svh-5.5rem)] overflow-y-auto overscroll-contain rounded-3xl p-5 [scrollbar-width:none] sm:p-6 [&::-webkit-scrollbar]:hidden"
           >
             <ul className="flex flex-col gap-1">
-              {NAV.filter((item) => item.desktop !== false).map((item) => (
+              {NAV.map((item) => (
                 <li key={item.to}>
                   <NavLink
                     to={item.to}

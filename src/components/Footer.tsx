@@ -5,8 +5,8 @@ import { CONTACT_MAILTO, TELEGRAM_URL } from "@/lib/motion";
 export function Footer() {
   const year = new Date().getFullYear();
   return (
-    <footer className="relative mt-24 border-t border-silver-300/10 bg-navy-950/60 backdrop-blur-xl">
-      <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16 py-16 grid gap-12 lg:grid-cols-3">
+    <footer className="relative mt-12 border-t border-silver-300/10 bg-navy-950/60 backdrop-blur-xl md:mt-24">
+      <div className="mx-auto grid max-w-7xl gap-8 px-5 py-10 md:px-10 md:py-16 lg:grid-cols-3 lg:gap-12 lg:px-16">
         <div>
           <div className="font-display text-2xl text-silver-100">
             Dr. David De Fazio
@@ -23,7 +23,7 @@ export function Footer() {
 
         <div>
           <div className="kicker">Explore</div>
-          <ul className="mt-4 space-y-1 text-sm text-silver-300/80">
+          <ul className="mt-3 grid grid-cols-2 gap-x-4 text-sm text-silver-300/80 sm:grid-cols-4 lg:mt-4 lg:block lg:space-y-1">
             {[
               ["/", "Home"],
               ["/ask-defazio", "HydroAIgen"],
@@ -90,7 +90,7 @@ export function Footer() {
       </div>
 
       <div className="border-t border-silver-300/10">
-        <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16 py-8 space-y-4">
+        <div className="mx-auto max-w-7xl space-y-4 px-5 py-6 md:px-10 md:py-8 lg:px-16">
           <p className="text-[11px] leading-relaxed text-silver-400/70 max-w-4xl">
             <strong className="text-silver-300/90 font-medium">
               Medical Disclaimer:

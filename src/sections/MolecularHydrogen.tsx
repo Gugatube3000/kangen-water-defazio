@@ -18,7 +18,7 @@ function InfoTip({ children }: { children: ReactNode }) {
         type="button"
         onClick={() => setOpen((v) => !v)}
         aria-expanded={open}
-        className="ml-1 inline-flex h-[1.15em] w-[1.15em] items-center justify-center rounded-full bg-aqua-400/20 align-middle text-[0.7em] font-semibold text-aqua-200 leading-none transition hover:bg-aqua-400/35"
+        className="ml-1 inline-flex h-8 w-8 items-center justify-center rounded-full bg-aqua-400/20 align-middle text-sm font-semibold leading-none text-aqua-200 transition hover:bg-aqua-400/35"
         aria-label="What is this?"
       >
         ?

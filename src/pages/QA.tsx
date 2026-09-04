@@ -159,13 +159,13 @@ export default function QA() {
   }
 
   return (
-    <section className="relative min-h-[100svh] overflow-hidden pt-32 pb-16 md:pt-40">
+    <section className="relative min-h-[100svh] overflow-hidden pb-10 pt-28 md:pb-16 md:pt-40">
       <div
         aria-hidden
         className="absolute inset-0 bg-[radial-gradient(55%_42%_at_50%_10%,rgba(164,231,240,0.14),transparent_72%)]"
       />
 
-      <div className="relative mx-auto max-w-7xl px-5 md:px-10 lg:px-16 space-y-16">
+      <div className="relative mx-auto max-w-7xl space-y-10 px-5 md:space-y-16 md:px-10 lg:px-16">
         {/* Header */}
         <div className="mx-auto w-full max-w-3xl text-center">
           <div className="kicker">Knowledge & Consultation</div>
@@ -184,14 +184,14 @@ export default function QA() {
             <div className="flex h-[450px] sm:h-[500px] md:h-[550px] w-full flex-col overflow-hidden rounded-3xl border border-white/[0.08] bg-white/[0.035] shadow-glass backdrop-blur-2xl">
               <div className="flex shrink-0 items-center justify-between border-b border-white/[0.06] px-5 py-4">
                 <div>
-                  <div className="text-[10px] uppercase tracking-ultra text-aqua-300/80 font-semibold">
+                  <div className="text-[11px] uppercase tracking-ultra text-aqua-300/80 font-semibold">
                     HydroAI Assistant
                   </div>
                   <div className="hidden text-xs text-silver-400/80 sm:block mt-0.5">
                     Real-time science guide on ERW, ORP, and molecular hydrogen
                   </div>
                 </div>
-                <div className="flex items-center gap-2 text-[10px] uppercase tracking-ultra text-aqua-200/90 font-medium">
+                <div className="flex items-center gap-2 text-[11px] uppercase tracking-ultra text-aqua-200/90 font-medium">
                   <span className="h-1.5 w-1.5 rounded-full bg-aqua-300 animate-pulse" />
                   Online
                 </div>
@@ -208,7 +208,7 @@ export default function QA() {
                         setInput(question);
                         inputRef.current?.focus();
                       }}
-                      className="rounded-full border border-silver-300/10 bg-white/[0.02] px-3.5 py-1.5 text-xs text-silver-300/90 hover:border-aqua-300/30 hover:bg-white/[0.05] transition whitespace-nowrap"
+                      className="min-h-11 whitespace-nowrap rounded-full border border-silver-300/10 bg-white/[0.02] px-4 py-2.5 text-xs text-silver-300/90 transition hover:border-aqua-300/30 hover:bg-white/[0.05]"
                     >
                       {question}
                     </button>
@@ -229,14 +229,14 @@ export default function QA() {
                         : "mr-auto max-w-[90%] rounded-2xl border border-white/[0.05] bg-navy-950/40 px-4 py-3 text-silver-200"
                     }
                   >
-                    <p className="whitespace-pre-wrap break-words text-xs sm:text-sm leading-relaxed">
+                    <p className="whitespace-pre-wrap break-words text-sm leading-relaxed">
                       {message.content}
                     </p>
                   </motion.div>
                 ))}
 
                 {loading && (
-                  <div className="mr-auto max-w-[85%] rounded-2xl border border-white/[0.05] bg-navy-950/40 px-4 py-3 text-xs text-silver-400/80 animate-pulse">
+                  <div className="mr-auto max-w-[85%] animate-pulse rounded-2xl border border-white/[0.05] bg-navy-950/40 px-4 py-3 text-sm text-silver-400/80">
                     Analyzing scientific notes...
                   </div>
                 )}
@@ -325,7 +325,7 @@ export default function QA() {
                   setActiveCategory(cat);
                   setExpandedFaq(null);
                 }}
-                className={`px-4 py-1.5 rounded-full text-xs font-medium tracking-wide transition border ${
+                className={`min-h-11 rounded-full border px-4 py-2.5 text-xs font-medium tracking-wide transition ${
                   activeCategory === cat
                     ? "bg-aqua-400/20 border-aqua-400/55 text-aqua-200"
                     : "border-white/[0.06] bg-white/[0.02] text-silver-300/80 hover:border-white/20"

@@ -24,7 +24,7 @@ const stories = [
 export default function Testimonials() {
   return (
     <>
-      <section className="pt-40 pb-12 md:pt-48 md:pb-16">
+      <section className="pb-8 pt-28 md:pb-16 md:pt-48">
         <div className="mx-auto max-w-7xl px-5 md:px-10 lg:px-16">
           <SectionHeading
             kicker="Stories"
@@ -43,7 +43,7 @@ export default function Testimonials() {
 
       <section className="section-pad pt-0 relative">
         <div className="mx-auto max-w-6xl">
-          <div className="grid gap-5 md:grid-cols-3">
+          <div className="mobile-snap-row grid gap-5 md:grid-cols-3">
             {stories.map((story, index) => (
               <Reveal key={story.title} delay={index * 0.05}>
                 <article className="flex h-full flex-col rounded-2xl border border-white/[0.1] bg-white/[0.045] p-6 shadow-glass backdrop-blur-2xl">

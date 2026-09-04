@@ -30,7 +30,7 @@ const officialPoints = [
 export default function Business() {
   return (
     <>
-      <section className="pt-40 pb-12 md:pt-48 md:pb-16">
+      <section className="pb-8 pt-28 md:pb-16 md:pt-48">
         <div className="mx-auto max-w-7xl px-5 md:px-10 lg:px-16">
           <SectionHeading
             kicker="The Opportunity"
@@ -50,7 +50,7 @@ export default function Business() {
       <section className="section-pad pt-0 relative">
         <div className="mx-auto max-w-7xl">
           <Reveal>
-            <div className="grid gap-4 md:grid-cols-2">
+            <div className="mobile-snap-row grid gap-4 md:grid-cols-2">
               {officialPoints.map((point) => (
                 <article
                   key={point.title}

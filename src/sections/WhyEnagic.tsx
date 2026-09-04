@@ -65,7 +65,7 @@ export function WhyEnagic() {
             {QUESTIONS.map(([title, body], i) => (
               <li key={title} className="py-4">
                 <details>
-                  <summary className="cursor-pointer text-silver-100 marker:text-aqua-300"><span className="mr-3 font-mono text-xs text-aqua-300">{String(i + 1).padStart(2, "0")}</span>{title}</summary>
+                  <summary className="inline-flex min-h-11 cursor-pointer items-center text-silver-100 marker:text-aqua-300"><span className="mr-3 font-mono text-xs text-aqua-300">{String(i + 1).padStart(2, "0")}</span>{title}</summary>
                   <p className="mt-3 text-sm leading-relaxed text-silver-300/85">{body}</p>
                 </details>
               </li>

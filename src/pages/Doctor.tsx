@@ -6,7 +6,7 @@ import { Reveal } from "@/components/Reveal";
 export default function Doctor() {
   return (
     <>
-      <section className="pt-40 md:pt-48 pb-8">
+      <section className="pb-7 pt-28 md:pt-48">
         <div className="mx-auto max-w-7xl px-6 md:px-10 lg:px-16">
           <SectionHeading
             kicker="About Dr. De Fazio"
@@ -23,9 +23,9 @@ export default function Doctor() {
       <DoctorSection expanded />
 
       <section className="section-pad relative">
-        <div className="mx-auto max-w-4xl">
+        <div className="mobile-snap-row mx-auto max-w-4xl md:block">
           <Reveal>
-            <div className="glass p-8 md:p-12 space-y-6">
+            <div className="glass space-y-6 p-6 md:p-12">
               <div className="kicker">My story</div>
               <p className="text-silver-200/90 leading-relaxed text-balance">
                 I began my medical career with a strong foundation —
@@ -62,7 +62,7 @@ export default function Doctor() {
           </Reveal>
 
           <Reveal>
-            <div className="mt-10 glass p-8 md:p-12 space-y-5">
+            <div className="glass mt-0 space-y-5 p-6 md:mt-10 md:p-12">
               <div className="kicker">The framing I prefer</div>
               <p className="font-display text-2xl md:text-3xl text-silver-100 leading-relaxed text-balance">
                 "Life without balance, is life in pathology."
@@ -72,7 +72,7 @@ export default function Doctor() {
           </Reveal>
 
           <Reveal>
-            <div className="mt-10 glass p-8 md:p-12 space-y-5 border border-aqua-400/10">
+            <div className="glass mt-0 space-y-5 border border-aqua-400/10 p-6 md:mt-10 md:p-12">
               <div className="kicker">My philosophy on health</div>
               <blockquote className="font-display text-xl md:text-2xl text-silver-100 leading-relaxed text-balance italic">
                 "Health is the foundation of everything we hope to achieve. It
@@ -88,7 +88,7 @@ export default function Doctor() {
           </Reveal>
 
           <Reveal>
-            <div className="mt-10 glass p-8 md:p-12 space-y-5">
+            <div className="glass mt-0 space-y-5 p-6 md:mt-10 md:p-12">
               <div className="kicker">Why I started checking the water</div>
               <p className="text-silver-200/90 leading-relaxed text-balance">
                 As part of my search for answers, a
@@ -114,7 +114,7 @@ export default function Doctor() {
           </Reveal>
 
           <Reveal>
-            <div className="mt-10 glass p-8 md:p-12 space-y-5">
+            <div className="glass mt-0 space-y-5 p-6 md:mt-10 md:p-12">
               <div className="kicker">A note on scope</div>
               <p className="text-silver-200/90 leading-relaxed text-balance">
                 This site is educational. I am not prescribing, diagnosing, or

@@ -7,12 +7,17 @@ import { FinalCTA } from "@/sections/FinalCTA";
 
 const TOPIC_ORDER = [
   "Hydration Physiology",
+  "Nutrition",
   "Molecular Hydrogen",
   "Selective Antioxidant",
   "Athletic Performance",
   "Water Structure",
   "Aquaporins",
+  "Cellular Respiration",
+  "Mitochondrial Biology",
+  "Oxidative Stress",
   "Cell Biology",
+  "Electromagnetic Fields",
   "Animal Studies",
   "Digestive & Microflora",
   "Bioelectricity",
@@ -33,11 +38,16 @@ export default function References() {
   useEffect(() => {
     if (hash) {
       const el = document.querySelector(hash);
-      if (el)
-        el.scrollIntoView({
-          behavior: "smooth",
-          block: "center",
+      if (el) {
+        const topic = el.closest("details.reference-topic") as HTMLDetailsElement | null;
+        if (topic) topic.open = true;
+        requestAnimationFrame(() => {
+          el.scrollIntoView({
+            behavior: "smooth",
+            block: "center",
+          });
         });
+      }
     }
   }, [hash]);
 
@@ -46,7 +56,7 @@ export default function References() {
 
   return (
     <>
-      <section className="pt-40 md:pt-48 pb-12 md:pb-16">
+      <section className="pb-8 pt-28 md:pb-16 md:pt-48">
         <div className="mx-auto max-w-7xl px-5 md:px-10 lg:px-16">
           <SectionHeading
             kicker="References · Bibliography"
@@ -72,13 +82,19 @@ export default function References() {
       <section className="section-pad pt-0">
         <div className="mx-auto max-w-4xl">
           {/* Quick jump nav */}
-          <nav className="glass p-5 sm:p-6 mb-12">
+          <nav className="glass mb-7 p-4 sm:p-6 md:mb-12">
             <div className="kicker mb-3">Jump to topic</div>
-            <ul className="flex flex-wrap gap-2 text-sm text-silver-200">
+            <ul className="mobile-topic-strip flex gap-2 text-sm text-silver-200 md:flex-wrap">
               {sortedTopics.map((t) => (
                 <li key={t}>
                   <a
                     href={`#topic-${t.replace(/\s+/g, "-").toLowerCase()}`}
+                    onClick={() => {
+                      const topic = document.getElementById(
+                        `topic-${t.replace(/\s+/g, "-").toLowerCase()}`,
+                      ) as HTMLDetailsElement | null;
+                      if (topic) topic.open = true;
+                    }}
                     className="inline-flex min-h-10 items-center rounded-full border border-silver-300/12 bg-white/[0.035] px-3 py-2 leading-tight transition hover:border-aqua-300/35 hover:text-aqua-300"
                   >
                     {t}
@@ -90,58 +106,74 @@ export default function References() {
 
           {sortedTopics.map((topic) => (
             <Reveal key={topic}>
-              <section
+              <details
                 id={`topic-${topic.replace(/\s+/g, "-").toLowerCase()}`}
-                className="mb-14"
+                className="reference-topic group mb-3 scroll-mt-24 md:mb-14"
               >
-                <h2 className="font-display text-2xl sm:text-3xl text-silver-100 border-b border-silver-300/15 pb-3 mb-6">
-                  {topic}
-                </h2>
-                <ol className="space-y-6">
-                  {grouped[topic].map((c) => (
-                    <li
-                      key={c.id}
-                      id={`cite-${c.id}`}
-                      className="grid grid-cols-[2rem_1fr] gap-3 sm:gap-4 scroll-mt-24"
-                    >
-                      <span className="font-display text-aqua-300 text-lg tabular-nums">
-                        [{c.id}]
-                      </span>
-                      <div>
-                        {c.authors && (
-                          <div className="text-silver-200 font-medium">
-                            {c.authors}
+                <summary className="reference-topic-summary md:hidden">
+                  <span>
+                    <span className="block font-display text-2xl leading-tight text-silver-100">
+                      {topic}
+                    </span>
+                    <span className="mt-1 block text-xs text-silver-400/75">
+                      {grouped[topic].length} {grouped[topic].length === 1 ? "source" : "sources"}
+                    </span>
+                  </span>
+                  <span className="reference-topic-chevron inline-flex h-9 w-9 items-center justify-center rounded-full border border-aqua-300/20 bg-aqua-300/[0.08] text-xl text-aqua-200 transition-transform">
+                    +
+                  </span>
+                </summary>
+                <div className="reference-topic-body">
+                  <h2 className="mb-6 hidden border-b border-silver-300/15 pb-3 font-display text-2xl text-silver-100 md:block sm:text-3xl">
+                    {topic}
+                  </h2>
+                  <ol className="space-y-5 md:space-y-6">
+                    {grouped[topic].map((c) => (
+                      <li
+                        key={c.id}
+                        id={`cite-${c.id}`}
+                        className="grid scroll-mt-24 grid-cols-[2rem_1fr] gap-3 sm:gap-4"
+                      >
+                        <span className="font-display text-lg tabular-nums text-aqua-300">
+                          [{c.id}]
+                        </span>
+                        <div>
+                          {c.authors && (
+                            <div className="font-medium text-silver-200">
+                              {c.authors}
+                            </div>
+                          )}
+                          <div className="mt-0.5 italic text-silver-100">
+                            {c.title}
                           </div>
-                        )}
-                        <div className="italic text-silver-100 mt-0.5">
-                          {c.title}
-                        </div>
-                        <div className="text-silver-400/85 text-sm mt-1">
-                          {c.source}
-                        </div>
-                        {c.url && (
-                          <a
-                            href={c.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="mt-2 inline-flex min-h-10 items-center text-aqua-300 text-sm leading-snug hover:text-aqua-200 underline decoration-aqua-400/40 underline-offset-4 break-all"
-                          >
-                            {c.url}
-                          </a>
-                        )}
-                        {c.doctorNote && (
-                          <div className="mt-3 p-3 rounded-lg bg-aqua-400/[0.05] border-l-2 border-aqua-400/40 text-sm text-silver-300/90 leading-relaxed">
-                            <span className="text-aqua-300 text-[10px] tracking-ultra uppercase font-medium block mb-1">
-                              Doctor's note
-                            </span>
-                            {c.doctorNote}
+                          <div className="mt-1 text-sm text-silver-400/85">
+                            {c.source}
                           </div>
-                        )}
-                      </div>
-                    </li>
-                  ))}
-                </ol>
-              </section>
+                          {c.url && (
+                            <a
+                              href={c.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="mt-2 inline-flex min-h-10 items-center text-sm leading-snug text-aqua-300 underline decoration-aqua-400/40 underline-offset-4 hover:text-aqua-200 md:break-all"
+                            >
+                              <span className="md:hidden">Open source ↗</span>
+                              <span className="hidden md:inline">{c.url}</span>
+                            </a>
+                          )}
+                          {c.doctorNote && (
+                            <div className="mt-3 rounded-lg border-l-2 border-aqua-400/40 bg-aqua-400/[0.05] p-3 text-sm leading-relaxed text-silver-300/90">
+                              <span className="mb-1 block text-[10px] font-medium uppercase tracking-ultra text-aqua-300">
+                                Doctor's note
+                              </span>
+                              {c.doctorNote}
+                            </div>
+                          )}
+                        </div>
+                      </li>
+                    ))}
+                  </ol>
+                </div>
+              </details>
             </Reveal>
           ))}
 

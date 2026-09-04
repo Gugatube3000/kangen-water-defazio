@@ -38,13 +38,13 @@ export function Hero() {
       />
       <motion.div
         style={{ y: textY, opacity: textOpacity }}
-        className="relative z-10 mx-auto max-w-7xl px-5 md:px-10 lg:px-16 pt-32 md:pt-44 pb-20 md:pb-28 min-h-[100svh] flex flex-col justify-between"
+        className="relative z-10 mx-auto flex min-h-[100svh] max-w-7xl flex-col justify-between px-5 pb-8 pt-24 sm:pb-20 sm:pt-32 md:px-10 md:pb-28 md:pt-44 lg:px-16"
       >
         <div className="max-w-3xl">
           <motion.blockquote
             initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7 }}
-            className="mb-8 max-w-2xl border-l border-aqua-200/70 pl-5 font-display text-xl italic leading-relaxed text-white [text-shadow:0_2px_12px_rgba(3,20,37,0.72)] sm:text-2xl"
+            className="mb-6 max-w-2xl border-l border-aqua-200/70 pl-4 font-display text-lg italic leading-relaxed text-white [text-shadow:0_2px_12px_rgba(3,20,37,0.72)] sm:mb-8 sm:pl-5 sm:text-2xl"
           >
             “Water is life’s matter and matrix, mother and medium. There is no life without water.”
             <cite className="mt-2 block font-sans text-[10px] not-italic uppercase tracking-ultra text-aqua-100/85">
@@ -61,7 +61,7 @@ export function Hero() {
             <span className="kicker">Evidence-Based Hydration Education</span>
           </motion.div>
 
-          <h1 className="mt-6 font-display text-[2.75rem] sm:text-6xl md:text-7xl lg:text-[5.5rem] font-light leading-[0.98] tracking-tight text-balance text-silver-100">
+          <h1 className="mt-5 font-display text-[2.55rem] font-light leading-[0.98] tracking-tight text-balance text-silver-100 sm:mt-6 sm:text-6xl md:text-7xl lg:text-[5.5rem]">
             <MaskedHeadline
               parts={[
                 { text: "The future" },
@@ -82,7 +82,7 @@ export function Hero() {
               ease: [0.23, 1, 0.32, 1],
               delay: 0.18,
             }}
-            className="mt-7 max-w-2xl font-display text-xl leading-relaxed text-silver-100 text-balance [text-shadow:0_1px_8px_rgba(14,26,54,0.6)] sm:text-2xl md:text-3xl"
+            className="mt-5 max-w-2xl font-display text-lg leading-relaxed text-silver-100 text-balance [text-shadow:0_1px_8px_rgba(14,26,54,0.6)] sm:mt-7 sm:text-2xl md:text-3xl"
           >
             Here’s a question most people have never been asked: “Is the water
             you’re drinking simply{" "}
@@ -98,7 +98,7 @@ export function Hero() {
               ease: [0.23, 1, 0.32, 1],
               delay: 0.28,
             }}
-            className="mt-5 max-w-xl text-sm text-aqua-300/80 italic font-display"
+            className="mt-4 max-w-xl text-sm italic font-display text-aqua-300/80 sm:mt-5"
           >
             A personal guide to the questions, the evidence, and the solution
             I chose — at your own pace.
@@ -112,7 +112,7 @@ export function Hero() {
               ease: [0.23, 1, 0.32, 1],
               delay: 0.36,
             }}
-            className="mt-9 flex flex-wrap gap-3"
+            className="mt-6 flex flex-wrap gap-3 sm:mt-9"
           >
             <PremiumButton href="#hydration-introduction" size="lg" variant="primary">
               What hydration means
@@ -120,7 +120,7 @@ export function Hero() {
           </motion.div>
         </div>
 
-        <div className="mt-12 md:mt-0 self-start md:self-end">
+        <div className="mt-12 hidden self-start sm:block md:mt-0 md:self-end">
           <DoctorCard variant="compact" />
         </div>
       </motion.div>
