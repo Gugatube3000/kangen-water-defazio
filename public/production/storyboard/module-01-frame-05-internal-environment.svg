@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-labelledby="title desc">
+  <title id="title">Module 1 Frame 5 - Internal Environment</title>
+  <desc id="desc">Cells suspended in clear water with oxygen and nutrients moving in and CO2 and waste moving out.</desc>
+  <defs>
+    <radialGradient id="cell" cx="45%" cy="42%" r="58%"><stop offset="0%" stop-color="#E6FDFF" stop-opacity=".45"/><stop offset="100%" stop-color="#39D6E8" stop-opacity=".08"/></radialGradient>
+    <pattern id="grid" width="92" height="92" patternUnits="userSpaceOnUse"><path d="M92 0H0v92" fill="none" stroke="#A4E7F0" stroke-opacity=".06"/></pattern>
+  </defs>
+  <rect width="1920" height="1080" fill="#071827"/>
+  <rect width="1920" height="1080" fill="url(#grid)"/>
+  <text x="120" y="132" fill="#A4E7F0" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="8">FRAME 05 / INTERNAL ENVIRONMENT</text>
+  <circle cx="960" cy="492" r="214" fill="url(#cell)" stroke="#DFFBFF" stroke-opacity=".42" stroke-width="5"/>
+  <circle cx="550" cy="378" r="88" fill="url(#cell)" stroke="#DFFBFF" stroke-opacity=".22" stroke-width="4"/>
+  <circle cx="1346" cy="618" r="112" fill="url(#cell)" stroke="#DFFBFF" stroke-opacity=".22" stroke-width="4"/>
+  <g font-family="Inter, Arial, sans-serif" font-size="34" font-weight="800">
+    <path d="M292 488h396" stroke="#39D6E8" stroke-width="14" stroke-linecap="round"/>
+    <path d="M650 448l58 40-58 40" fill="none" stroke="#39D6E8" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="292" y="444" fill="#A4E7F0">O2 + nutrients in</text>
+    <path d="M1234 492h396" stroke="#AABBC9" stroke-width="14" stroke-linecap="round"/>
+    <path d="M1592 452l58 40-58 40" fill="none" stroke="#AABBC9" stroke-width="14" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="1234" y="448" fill="#D9E7EF">CO2 + waste out</text>
+  </g>
+  <text x="120" y="950" fill="#F3FAFF" font-family="Inter, Arial, sans-serif" font-size="62" font-weight="700">Water is the medium around every cell.</text>
+</svg>

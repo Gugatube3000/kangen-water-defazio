@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-labelledby="title desc">
+  <title id="title">Module 1 Frame 3 - Not All Water Is Equal</title>
+  <desc id="desc">A row of water-type cards ending with ERW highlighted.</desc>
+  <defs>
+    <linearGradient id="glass" x1="0" x2="0" y1="0" y2="1">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity=".08"/>
+      <stop offset="100%" stop-color="#39D6E8" stop-opacity=".18"/>
+    </linearGradient>
+    <pattern id="grid" width="90" height="90" patternUnits="userSpaceOnUse">
+      <path d="M90 0H0v90" fill="none" stroke="#A4E7F0" stroke-opacity=".07"/>
+    </pattern>
+  </defs>
+  <rect width="1920" height="1080" fill="#071827"/>
+  <rect width="1920" height="1080" fill="url(#grid)"/>
+  <text x="120" y="132" fill="#A4E7F0" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="8">FRAME 03 / NOT ALL WATER IS EQUAL</text>
+  <g font-family="Inter, Arial, sans-serif" text-anchor="middle">
+    <g transform="translate(118 276)"><rect width="246" height="420" rx="38" fill="#FFFFFF" fill-opacity=".035" stroke="#FFFFFF" stroke-opacity=".12"/><path d="M86 126h74v170c0 42-74 42-74 0z" fill="url(#glass)" stroke="#A4E7F0" stroke-opacity=".25"/><text x="123" y="354" fill="#D9E7EF" font-size="28" font-weight="700">Distilled</text></g>
+    <g transform="translate(398 276)"><rect width="246" height="420" rx="38" fill="#FFFFFF" fill-opacity=".035" stroke="#FFFFFF" stroke-opacity=".12"/><path d="M86 126h74v170c0 42-74 42-74 0z" fill="url(#glass)" stroke="#A4E7F0" stroke-opacity=".25"/><text x="123" y="354" fill="#D9E7EF" font-size="28" font-weight="700">RO</text></g>
+    <g transform="translate(678 276)"><rect width="246" height="420" rx="38" fill="#FFFFFF" fill-opacity=".035" stroke="#FFFFFF" stroke-opacity=".12"/><path d="M86 126h74v170c0 42-74 42-74 0z" fill="url(#glass)" stroke="#A4E7F0" stroke-opacity=".25"/><text x="123" y="354" fill="#D9E7EF" font-size="28" font-weight="700">Filtered</text></g>
+    <g transform="translate(958 276)"><rect width="246" height="420" rx="38" fill="#FFFFFF" fill-opacity=".035" stroke="#FFFFFF" stroke-opacity=".12"/><path d="M86 126h74v170c0 42-74 42-74 0z" fill="url(#glass)" stroke="#A4E7F0" stroke-opacity=".25"/><text x="123" y="342" fill="#D9E7EF" font-size="25" font-weight="700">Chemically</text><text x="123" y="376" fill="#D9E7EF" font-size="25" font-weight="700">Alkaline</text></g>
+    <g transform="translate(1238 276)"><rect width="246" height="420" rx="38" fill="#FFFFFF" fill-opacity=".035" stroke="#FFFFFF" stroke-opacity=".12"/><path d="M86 126h74v170c0 42-74 42-74 0z" fill="url(#glass)" stroke="#A4E7F0" stroke-opacity=".25"/><text x="123" y="354" fill="#D9E7EF" font-size="28" font-weight="700">Ionized</text></g>
+    <g transform="translate(1518 250)"><rect width="282" height="472" rx="44" fill="#39D6E8" fill-opacity=".12" stroke="#A4E7F0" stroke-opacity=".48" stroke-width="3"/><circle cx="141" cy="204" r="98" fill="#A4E7F0" fill-opacity=".16"/><path d="M104 126h74v178c0 44-74 44-74 0z" fill="#A4E7F0" fill-opacity=".38" stroke="#E6FDFF" stroke-opacity=".5"/><text x="141" y="386" fill="#F3FAFF" font-size="42" font-weight="800">ERW</text><text x="141" y="426" fill="#A4E7F0" font-size="20" font-weight="700" letter-spacing="5">CHARGED</text></g>
+  </g>
+  <text x="120" y="950" fill="#F3FAFF" font-family="Inter, Arial, sans-serif" font-size="62" font-weight="700">The conversation cannot stop at “drink more water.”</text>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-labelledby="title desc">
+  <title id="title">Module 1 Frame 6 - Conviction With Guardrails</title>
+  <desc id="desc">A calm safety overlay over moving water stating educational only and ERW is not a cure.</desc>
+  <defs>
+    <linearGradient id="water" x1="0" x2="1"><stop offset="0%" stop-color="#071827"/><stop offset="42%" stop-color="#0E4E64"/><stop offset="100%" stop-color="#071827"/></linearGradient>
+    <pattern id="grid" width="96" height="96" patternUnits="userSpaceOnUse"><path d="M96 0H0v96" fill="none" stroke="#A4E7F0" stroke-opacity=".06"/></pattern>
+  </defs>
+  <rect width="1920" height="1080" fill="url(#water)"/>
+  <rect width="1920" height="1080" fill="url(#grid)"/>
+  <path d="M0 620c190-78 380 66 572-8 222-86 412 80 638-10 254-101 476 42 710-30v508H0z" fill="#A4E7F0" fill-opacity=".07"/>
+  <text x="120" y="132" fill="#A4E7F0" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="8">FRAME 06 / CONVICTION WITH GUARDRAILS</text>
+  <g transform="translate(360 310)">
+    <rect width="1200" height="390" rx="58" fill="#071827" fill-opacity=".74" stroke="#A4E7F0" stroke-opacity=".32" stroke-width="4"/>
+    <text x="600" y="126" text-anchor="middle" fill="#A4E7F0" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="800" letter-spacing="9">SAFETY OVERLAY</text>
+    <text x="600" y="225" text-anchor="middle" fill="#F3FAFF" font-family="Inter, Arial, sans-serif" font-size="78" font-weight="800">Educational only</text>
+    <text x="600" y="306" text-anchor="middle" fill="#D9E7EF" font-family="Inter, Arial, sans-serif" font-size="44" font-weight="700">ERW is not a cure and does not replace medical care.</text>
+  </g>
+</svg>

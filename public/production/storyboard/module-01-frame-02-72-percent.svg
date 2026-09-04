@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-labelledby="title desc">
+  <title id="title">Module 1 Frame 2 - Two Body-Water Numbers</title>
+  <desc id="desc">Adult total body water averages about 55 to 60 percent, while fat-free mass is about 70 to 75 percent water.</desc>
+  <defs>
+    <linearGradient id="water" x1="0" x2="1" y1="1" y2="0">
+      <stop offset="0%" stop-color="#39D6E8"/>
+      <stop offset="100%" stop-color="#F2FEFF"/>
+    </linearGradient>
+    <pattern id="grid" width="96" height="96" patternUnits="userSpaceOnUse">
+      <path d="M96 0H0v96" fill="none" stroke="#A4E7F0" stroke-opacity=".07"/>
+    </pattern>
+  </defs>
+  <rect width="1920" height="1080" fill="#071827"/>
+  <rect width="1920" height="1080" fill="url(#grid)"/>
+  <circle cx="1370" cy="280" r="420" fill="#39D6E8" fill-opacity=".08"/>
+  <text x="120" y="132" fill="#A4E7F0" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="8">FRAME 02 / TWO BODY-WATER NUMBERS</text>
+  <g transform="translate(172 242)">
+    <rect x="0" y="0" width="540" height="560" rx="54" fill="#FFFFFF" fill-opacity=".035" stroke="#FFFFFF" stroke-opacity=".12"/>
+    <text x="52" y="300" fill="#F3FAFF" font-family="Inter, Arial, sans-serif" font-size="118" font-weight="800">55–60%</text>
+    <text x="58" y="380" fill="#AABBC9" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="6">ADULT BODY</text>
+    <text x="58" y="430" fill="#AABBC9" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="600" letter-spacing="5">TOTAL WATER</text>
+  </g>
+  <g transform="translate(784 242)">
+    <rect x="0" y="0" width="960" height="560" rx="54" fill="#39D6E8" fill-opacity=".10" stroke="#A4E7F0" stroke-opacity=".32"/>
+    <path d="M0 460c120-66 240 56 360-10 150-82 274 58 430-14 78-36 126-28 170 8v116H0z" fill="url(#water)" opacity=".42"/>
+    <text x="72" y="300" fill="#F3FAFF" font-family="Inter, Arial, sans-serif" font-size="168" font-weight="800">70–75%</text>
+    <text x="82" y="390" fill="#A4E7F0" font-family="Inter, Arial, sans-serif" font-size="38" font-weight="700" letter-spacing="10">FAT-FREE MASS</text>
+    <text x="82" y="442" fill="#A4E7F0" font-family="Inter, Arial, sans-serif" font-size="26" font-weight="600" letter-spacing="6">IS WATER</text>
+  </g>
+  <text x="120" y="950" fill="#F3FAFF" font-family="Inter, Arial, sans-serif" font-size="46" font-weight="700">Whole-body water and fat-free-mass water are different measurements.</text>
+</svg>

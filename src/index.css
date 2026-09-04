@@ -1,0 +1,321 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: dark;
+  --aqua: #6fd7e6;
+  --navy: #0e1a36;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  /* Newsreader keeps long-form copy warm and readable; display headings use
+     Cormorant Garamond through .font-display. */
+  font-family: "Newsreader", Georgia, serif;
+  /* Luminous deep-water fallback behind the continuous water surface. */
+  background:
+    radial-gradient(
+      ellipse 90% 60% at 50% -5%,
+      rgba(139, 232, 240, 0.24) 0%,
+      transparent 65%
+    ),
+    radial-gradient(
+      ellipse 80% 70% at 50% 30%,
+      rgba(88, 205, 224, 0.20) 0%,
+      transparent 70%
+    ),
+    radial-gradient(
+      ellipse 70% 60% at 30% 75%,
+      rgba(91, 164, 196, 0.18) 0%,
+      transparent 60%
+    ),
+    linear-gradient(
+      to bottom,
+      #225a7a 0%,
+      #1b4d6d 35%,
+      #153f60 70%,
+      #102f4d 100%
+    );
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+
+::selection {
+  background: rgba(111, 215, 230, 0.35);
+  color: #f4f6fb;
+}
+
+/* Welcome and Why Water reveal exactly the same continuous water surface. */
+.water-background {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background: #174766;
+}
+.water-background-media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.43;
+  mix-blend-mode: screen;
+}
+.water-background-wash {
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 76% 16%, rgba(131, 226, 236, 0.20), transparent 38%),
+    radial-gradient(circle at 16% 68%, rgba(66, 178, 210, 0.13), transparent 42%),
+    linear-gradient(180deg, rgba(6, 29, 49, 0.18), rgba(6, 26, 46, 0.36)),
+    linear-gradient(110deg, rgba(10, 42, 67, 0.48), rgba(22, 79, 108, 0.32) 62%, rgba(8, 36, 61, 0.48));
+}
+
+.water-background-caustics {
+  position: absolute;
+  inset: -12%;
+  opacity: 0.28;
+  background:
+    radial-gradient(ellipse 18% 7% at 18% 15%, rgba(205, 251, 255, 0.30), transparent 70%),
+    radial-gradient(ellipse 25% 9% at 72% 25%, rgba(171, 241, 247, 0.25), transparent 72%),
+    radial-gradient(ellipse 21% 8% at 42% 70%, rgba(160, 235, 244, 0.18), transparent 72%),
+    radial-gradient(ellipse 16% 6% at 86% 82%, rgba(212, 253, 255, 0.20), transparent 72%);
+  filter: blur(18px);
+  animation: water-caustic-drift 24s ease-in-out infinite alternate;
+  will-change: transform;
+}
+
+.hydrogen-bubble-field {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  opacity: 0.62;
+  mask-image: linear-gradient(to bottom, transparent 0%, black 18%, black 88%, transparent 100%);
+}
+
+.hydrogen-bubble {
+  position: absolute;
+  left: 8%;
+  bottom: -7rem;
+  width: 18px;
+  height: 18px;
+  border: 1px solid rgba(220, 251, 255, 0.42);
+  border-radius: 999px;
+  background:
+    radial-gradient(circle at 32% 27%, rgba(255, 255, 255, 0.72) 0 6%, transparent 8%),
+    radial-gradient(circle at 58% 64%, rgba(134, 229, 239, 0.10), rgba(10, 62, 91, 0.06) 68%);
+  box-shadow:
+    inset -2px -3px 8px rgba(105, 215, 231, 0.12),
+    0 0 18px rgba(117, 224, 235, 0.10);
+  animation: hydrogen-rise 21s linear infinite;
+  will-change: transform, opacity;
+}
+
+.hydrogen-bubble > span {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  color: rgba(226, 252, 255, 0.68);
+  font: 600 8px/1 ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing: -0.04em;
+}
+
+.hydrogen-bubble:nth-child(1) { left: 5%; width: 11px; height: 11px; animation-delay: -4s; animation-duration: 23s; }
+.hydrogen-bubble:nth-child(2) { left: 14%; width: 24px; height: 24px; animation-delay: -16s; animation-duration: 27s; }
+.hydrogen-bubble:nth-child(3) { left: 24%; width: 8px; height: 8px; animation-delay: -8s; animation-duration: 19s; }
+.hydrogen-bubble:nth-child(4) { left: 33%; width: 30px; height: 30px; animation-delay: -21s; animation-duration: 31s; }
+.hydrogen-bubble:nth-child(5) { left: 42%; width: 13px; height: 13px; animation-delay: -12s; animation-duration: 22s; }
+.hydrogen-bubble:nth-child(6) { left: 51%; width: 7px; height: 7px; animation-delay: -3s; animation-duration: 18s; }
+.hydrogen-bubble:nth-child(7) { left: 59%; width: 20px; height: 20px; animation-delay: -18s; animation-duration: 29s; }
+.hydrogen-bubble:nth-child(8) { left: 67%; width: 10px; height: 10px; animation-delay: -6s; animation-duration: 20s; }
+.hydrogen-bubble:nth-child(9) { left: 74%; width: 15px; height: 15px; animation-delay: -25s; animation-duration: 32s; }
+.hydrogen-bubble:nth-child(10) { left: 82%; width: 34px; height: 34px; animation-delay: -11s; animation-duration: 30s; }
+.hydrogen-bubble:nth-child(11) { left: 90%; width: 9px; height: 9px; animation-delay: -20s; animation-duration: 24s; }
+.hydrogen-bubble:nth-child(12) { left: 18%; width: 6px; height: 6px; animation-delay: -27s; animation-duration: 34s; }
+.hydrogen-bubble:nth-child(13) { left: 63%; width: 12px; height: 12px; animation-delay: -14s; animation-duration: 26s; }
+.hydrogen-bubble:nth-child(14) { left: 95%; width: 18px; height: 18px; animation-delay: -7s; animation-duration: 25s; }
+
+.water-background.is-paused .water-background-caustics,
+.water-background.is-paused .hydrogen-bubble {
+  animation-play-state: paused;
+}
+
+@keyframes water-caustic-drift {
+  from { transform: translate3d(-2%, -1%, 0) scale(1); }
+  to { transform: translate3d(3%, 2%, 0) scale(1.06); }
+}
+
+@keyframes hydrogen-rise {
+  0% { transform: translate3d(0, 0, 0) scale(0.72); opacity: 0; }
+  10% { opacity: 0.42; }
+  55% { transform: translate3d(18px, -58vh, 0) scale(0.94); opacity: 0.32; }
+  100% { transform: translate3d(-10px, -118vh, 0) scale(1.12); opacity: 0; }
+}
+.ionizer-video::cue {
+  color: #fff;
+  background-color: rgba(5, 14, 31, 0.88);
+  font-family: Arial, sans-serif;
+  font-size: 0.85em;
+  line-height: 1.35;
+}
+
+.font-display {
+  font-feature-settings: "ss01", "liga";
+}
+
+@layer components {
+  .glass {
+    @apply relative rounded-3xl border border-white/[0.13] bg-navy-950/35 backdrop-blur-2xl shadow-glass;
+  }
+  .glass::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.18),
+      rgba(111, 215, 230, 0.08) 40%,
+      rgba(255, 255, 255, 0) 70%
+    );
+    -webkit-mask:
+      linear-gradient(#000 0 0) content-box,
+      linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    pointer-events: none;
+  }
+
+  .hairline {
+    background-image: linear-gradient(
+      90deg,
+      transparent,
+      rgba(215, 222, 234, 0.4),
+      transparent
+    );
+    height: 1px;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .section-pad {
+    @apply px-5 md:px-10 lg:px-16 py-10 sm:py-14 md:py-24;
+  }
+
+  .kicker {
+    @apply text-[11px] uppercase tracking-ultra text-aqua-400/80 font-medium;
+  }
+}
+
+@layer utilities {
+  .mask-fade-b {
+    -webkit-mask-image: linear-gradient(
+      to bottom,
+      black 70%,
+      transparent 100%
+    );
+    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  }
+  .mask-fade-t {
+    -webkit-mask-image: linear-gradient(
+      to top,
+      black 70%,
+      transparent 100%
+    );
+    mask-image: linear-gradient(to top, black 70%, transparent 100%);
+  }
+}
+
+/* ─── Button: hardware-accelerated hover + active ─────────────── */
+/* Emil: Framer Motion y/scale shorthands run on main thread via rAF.
+   CSS transforms run on the compositor (GPU) — stays smooth under load. */
+.premium-btn {
+  transition: transform 160ms cubic-bezier(0.23, 1, 0.32, 1),
+              box-shadow 160ms cubic-bezier(0.23, 1, 0.32, 1);
+  will-change: transform;
+}
+@media (hover: hover) and (pointer: fine) {
+  .premium-btn:hover {
+    transform: translateY(-2px);
+  }
+}
+
+/* Nav links: compact press state */
+@media (hover: hover) and (pointer: fine) {
+  nav a:active {
+    transform: scale(0.97);
+    transition: transform 100ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+}
+
+/* ─── Skip to content ─────────────────────────────────────────── */
+.skip-link {
+  position: fixed;
+  top: -100%;
+  left: 1rem;
+  z-index: 9999;
+  padding: 0.5rem 1rem;
+  background: #6fd7e6;
+  color: #0e1a36;
+  font-size: 0.875rem;
+  font-weight: 600;
+  border-radius: 9999px;
+  text-decoration: none;
+  transition: top 0.2s;
+}
+.skip-link:focus-visible {
+  top: 1rem;
+}
+
+/* ─── Focus visible ────────────────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid rgba(111, 215, 230, 0.8);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+/* Remove outline for mouse users; only show for keyboard */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ─── Grain noise overlay ──────────────────────────────────────── */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 9998;
+  opacity: 0.028;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='300'%3E%3Cfilter id='n' x='0' y='0'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='300' height='300' filter='url(%23n)' opacity='1'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 300px 300px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

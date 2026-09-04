@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-labelledby="title desc">
+  <title id="title">Module 1 Frame 7 - Close</title>
+  <desc id="desc">Three mobile-first closing cards over clear water: check tap water, learn ERW, and Ask DeFazio AI.</desc>
+  <defs>
+    <pattern id="grid" width="96" height="96" patternUnits="userSpaceOnUse"><path d="M96 0H0v96" fill="none" stroke="#A4E7F0" stroke-opacity=".07"/></pattern>
+  </defs>
+  <rect width="1920" height="1080" fill="#071827"/>
+  <rect width="1920" height="1080" fill="url(#grid)"/>
+  <circle cx="1520" cy="248" r="420" fill="#39D6E8" fill-opacity=".08"/>
+  <path d="M0 742c208-90 408 72 610-10 250-102 470 90 708-14 232-102 392 34 602-38v400H0z" fill="#A4E7F0" fill-opacity=".08"/>
+  <text x="120" y="132" fill="#A4E7F0" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="8">FRAME 07 / CLOSE</text>
+  <g font-family="Inter, Arial, sans-serif">
+    <g transform="translate(162 272)"><rect width="480" height="430" rx="54" fill="#FFFFFF" fill-opacity=".045" stroke="#A4E7F0" stroke-opacity=".24"/><text x="58" y="112" fill="#A4E7F0" font-size="28" font-weight="800" letter-spacing="6">STEP 01</text><text x="58" y="238" fill="#F3FAFF" font-size="64" font-weight="800">Check tap</text><text x="58" y="310" fill="#F3FAFF" font-size="64" font-weight="800">water</text></g>
+    <g transform="translate(720 272)"><rect width="480" height="430" rx="54" fill="#FFFFFF" fill-opacity=".045" stroke="#A4E7F0" stroke-opacity=".24"/><text x="58" y="112" fill="#A4E7F0" font-size="28" font-weight="800" letter-spacing="6">STEP 02</text><text x="58" y="238" fill="#F3FAFF" font-size="64" font-weight="800">Learn</text><text x="58" y="310" fill="#F3FAFF" font-size="64" font-weight="800">ERW</text></g>
+    <g transform="translate(1278 242)"><rect width="480" height="490" rx="58" fill="#39D6E8" fill-opacity=".12" stroke="#A4E7F0" stroke-opacity=".46" stroke-width="4"/><text x="58" y="132" fill="#A4E7F0" font-size="28" font-weight="800" letter-spacing="6">STEP 03</text><text x="58" y="258" fill="#F3FAFF" font-size="64" font-weight="800">Ask</text><text x="58" y="330" fill="#F3FAFF" font-size="64" font-weight="800">DeFazio AI</text><text x="58" y="400" fill="#A4E7F0" font-size="30" font-weight="700">or book a consultation</text></g>
+  </g>
+  <text x="120" y="950" fill="#F3FAFF" font-family="Inter, Arial, sans-serif" font-size="62" font-weight="700">Start with your water. Then ask better questions.</text>
+</svg>

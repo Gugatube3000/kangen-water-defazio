@@ -1,0 +1,23 @@
+materials/
+waterpipeimg/
+videosclips/
+deck_render/
+*.mp4
+*.MP4
+# …but the tap-water section's looping clip must ship.
+!public/pipe.mp4
+!public/hero-water.mp4
+# Science-page media is already optimized and tracked under public/videos.
+!public/videos/
+!public/videos/*.mp4
+*.mov
+*.MOV
+*.pptx
+*.pages
+node_modules/
+dist/
+.git/
+docs/
+*.log
+.DS_Store
+tsconfig.*.tsbuildinfo

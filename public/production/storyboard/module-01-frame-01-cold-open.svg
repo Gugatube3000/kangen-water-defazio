@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" role="img" aria-labelledby="title desc">
+  <title id="title">Module 1 Frame 1 - Cold Open</title>
+  <desc id="desc">A human silhouette fills with luminous structured water over a deep blue scientific background.</desc>
+  <defs>
+    <radialGradient id="glow" cx="50%" cy="50%" r="64%">
+      <stop offset="0%" stop-color="#A4E7F0" stop-opacity=".38"/>
+      <stop offset="55%" stop-color="#1E7C8F" stop-opacity=".18"/>
+      <stop offset="100%" stop-color="#071827" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="water" x1="0" x2="0" y1="1" y2="0">
+      <stop offset="0%" stop-color="#39D6E8"/>
+      <stop offset="58%" stop-color="#A4E7F0" stop-opacity=".68"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity=".2"/>
+    </linearGradient>
+    <pattern id="grid" width="92" height="92" patternUnits="userSpaceOnUse">
+      <path d="M92 0H0v92" fill="none" stroke="#A4E7F0" stroke-opacity=".08"/>
+    </pattern>
+  </defs>
+  <rect width="1920" height="1080" fill="#071827"/>
+  <rect width="1920" height="1080" fill="url(#grid)"/>
+  <circle cx="960" cy="540" r="610" fill="url(#glow)"/>
+  <g opacity=".58" fill="none" stroke="#A4E7F0" stroke-width="3">
+    <path d="M342 710l48-83h96l48 83-48 84h-96z"/>
+    <path d="M1392 278l44-76h88l44 76-44 77h-88z"/>
+    <path d="M1338 734l36-63h72l36 63-36 62h-72z"/>
+  </g>
+  <g transform="translate(0 18)">
+    <circle cx="960" cy="294" r="82" fill="#A4E7F0" fill-opacity=".09" stroke="#DFFBFF" stroke-opacity=".48" stroke-width="4"/>
+    <path d="M842 438c0-46 37-83 83-83h70c46 0 83 37 83 83v328c0 69-53 125-118 125s-118-56-118-125z" fill="#FFFFFF" fill-opacity=".035" stroke="#DFFBFF" stroke-opacity=".5" stroke-width="4"/>
+    <clipPath id="bodyClip"><path d="M842 438c0-46 37-83 83-83h70c46 0 83 37 83 83v328c0 69-53 125-118 125s-118-56-118-125z"/></clipPath>
+    <g clip-path="url(#bodyClip)">
+      <rect x="842" y="536" width="236" height="355" fill="url(#water)"/>
+      <path d="M822 585c75-38 150 32 226-4 46-22 78-18 120 10v320H822z" fill="#E6FDFF" fill-opacity=".16"/>
+    </g>
+  </g>
+  <text x="120" y="132" fill="#A4E7F0" font-family="Inter, Arial, sans-serif" font-size="30" font-weight="700" letter-spacing="8">FRAME 01 / COLD OPEN</text>
+  <text x="120" y="940" fill="#F3FAFF" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="700">What if the starting point is the water</text>
+  <text x="120" y="1006" fill="#F3FAFF" font-family="Inter, Arial, sans-serif" font-size="58" font-weight="700">that makes up most of you?</text>
+</svg>
