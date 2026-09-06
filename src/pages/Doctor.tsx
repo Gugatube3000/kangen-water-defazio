@@ -94,7 +94,7 @@ export default function Doctor() {
                 As part of my search for answers, a
                 naturopathic screening flagged a long list of concerns:
                 atrazine, glyphosate, volatile organic compounds, heavy metals,
-                PFAS, BPA, parasites, and other findings. I then looked up my municipal
+                PFAS, BPA, and other findings. I then looked up my municipal
                 water report and called my city to understand what was being
                 measured.
               </p>

@@ -13,11 +13,7 @@ export function TransparencyDisclosure() {
           <div className="max-w-4xl">
             <div className="kicker">Transparency before the first claim</div>
             <p className="mt-3 text-sm leading-relaxed text-silver-200/88 md:text-base">
-              I am a physician educator and an authorized independent Enagic
-              distributor. If you purchase through my organization, I may
-              receive compensation. This site therefore separates established
-              physiology, emerging research, personal experience, and product
-              information so you can evaluate each on its own merits.
+              <em>“I am a physician educator and an independent, authorized distributor of this product. If a purchase is made through my organization, I may receive compensation. I disclose this relationship to provide appropriate transparency and allow you to weigh it alongside the information presented. My approach is educational rather than promotional. I strive to distinguish established physiology, emerging evidence, clinical experience, and product-specific information, with the goal of presenting the strengths, limitations, and uncertainties of each as objectively as possible.”</em>
             </p>
           </div>
           <div className="flex shrink-0 flex-wrap gap-4 text-sm">

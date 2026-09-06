@@ -13,7 +13,7 @@ const NAV = [
   { to: "/library", label: "Library", desktop: false },
   { to: "/qa", label: "Q&A", desktop: false },
   { to: "/references", label: "References", desktop: false },
-  { to: "/stories", label: "Stories", desktop: false },
+  { to: "/stories", label: "Stories" },
   { to: "/business", label: "Opportunity", desktop: false },
 ];
 

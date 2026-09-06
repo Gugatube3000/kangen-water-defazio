@@ -50,6 +50,12 @@ export function RespirationStageExplorer() {
         </p>
       </div>
 
+      <div className="border-b border-white/10 p-5 sm:p-7">
+        <h4 className="mb-4 font-display text-2xl text-silver-100">Watch the whole journey</h4>
+        <iframe className="aspect-video w-full rounded-xl" src="https://player.vimeo.com/video/161176017" title="Cellular respiration: glycolysis, Krebs cycle and electron transport overview" loading="lazy" allow="fullscreen; picture-in-picture" allowFullScreen />
+        <p className="mt-3 text-sm text-silver-300">A general visual overview. Use the explanations here for current ATP estimates and pathway details. <a href="https://vimeo.com/161176017" target="_blank" rel="noopener noreferrer" className="text-aqua-200 underline">Watch on Vimeo</a>.</p>
+      </div>
+
       <div className="grid lg:grid-cols-[.38fr_.62fr]">
         <div className="grid grid-cols-2 gap-2 border-b border-white/[0.08] p-4 sm:p-5 lg:grid-cols-1 lg:border-b-0 lg:border-r">
           {STAGES.map((stage, index) => {

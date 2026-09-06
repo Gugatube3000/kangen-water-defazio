@@ -87,7 +87,7 @@ export default function Home() {
       >
         <ChapterTransition
           next="Your water source"
-          quote="Health isn’t expensive—your priorities are. You’re either paying for it on the front end with food, sleep, movement, and prevention… or you’re paying for it later."
+          quote="Health isn’t expensive, your priorities are; you’re either paying for it on the front end with food, sleep, movement, and prevention… or you’re paying for it later."
           attribution="Dr. Raymond Nichols"
           note="Excerpted from the social post supplied for this guide."
         />

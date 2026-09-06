@@ -105,35 +105,7 @@ export function SimpleTruth() {
           ))}
         </motion.ol>
 
-        {/* Warburg context — kept historically accurate and medically careful. */}
-        <Reveal>
-          <div className="mt-16 md:mt-24 max-w-4xl mx-auto">
-            <div className="hairline" />
-            <div className="py-10 md:py-14">
-              <div className="kicker">Historical context · Otto Warburg</div>
-              <blockquote className="mt-5 border-l border-aqua-200/60 pl-5 font-display text-3xl italic leading-tight text-aqua-100 text-balance md:text-5xl">
-                “How does the metabolism of growing tissue differ from that of
-                resting?”
-                <footer className="mt-4 font-sans text-xs not-italic uppercase tracking-ultra text-silver-300/65">
-                  Otto Warburg · 1925 <Cite ids={50} />
-                </footer>
-              </blockquote>
-              <h3 className="mt-5 font-display text-2xl md:text-4xl text-silver-100 leading-relaxed text-balance">
-                Cancer metabolism is worth understanding. It is not a reason to
-                claim alkaline water treats cancer.
-              </h3>
-              <p className="mt-6 text-sm text-silver-300/65 leading-relaxed max-w-2xl">
-                Otto Warburg's work helped shape the study of altered cancer
-                metabolism. He received the 1931 Nobel Prize for his discovery
-                of the nature and mode of action of the respiratory enzyme, not
-                for proving that an alkaline drink cures cancer. Blood pH is
-                tightly regulated, and ERW does not replace oncology care
-                <Cite ids={[38, 50]} />.
-              </p>
-            </div>
-            <div className="hairline" />
-          </div>
-        </Reveal>
+
       </div>
     </section>
   );

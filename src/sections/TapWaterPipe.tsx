@@ -375,7 +375,7 @@ export function TapWaterPipe() {
             <p className="mt-3 text-sm leading-relaxed text-silver-300/85">
               During my search for answers around tinnitus and sleep, a
               naturopathic screening flagged atrazine, glyphosate,
-              volatile organic compounds, heavy metals, PFAS, BPA, parasites,
+              volatile organic compounds, heavy metals, PFAS, BPA,
               and other concerns. I then looked up my municipal report and
               called my city. My takeaway was practical: inspect the
               available records, ask better questions, and make informed

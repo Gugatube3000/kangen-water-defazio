@@ -9,12 +9,26 @@ import { fadeUp, stagger } from "@/lib/motion";
  * Photos are freely licensed portraits from Wikimedia Commons.
  */
 
-type Athlete = { name: string; sport: string; img?: string };
+type Athlete = { name: string; sport: string; img: string };
 
 const ATHLETES: Athlete[] = [
-  { name: "Tiger Woods", sport: "Golf" },
-  { name: "Magic Johnson", sport: "NBA" },
+  { name: "Tom Brady", sport: "NFL", img: "/athletes/brady.jpg" },
   { name: "LeBron James", sport: "NBA", img: "/athletes/lebron.jpg" },
+  { name: "Tiger Woods", sport: "Golf", img: "/athletes/tigerwoods.jpg" },
+  { name: "Floyd Mayweather", sport: "Boxing", img: "/athletes/mayweather.jpg" },
+  { name: "Manny Pacquiao", sport: "Boxing", img: "/athletes/pacquiao.jpg" },
+  { name: "Magic Johnson", sport: "NBA", img: "/athletes/magicjohnson.jpg" },
+  { name: "Cristiano Ronaldo", sport: "Football", img: "/athletes/ronaldo.jpg" },
+  { name: "Kamaru Usman", sport: "MMA", img: "/athletes/usman.png" },
+  { name: "Bryson DeChambeau", sport: "Golf", img: "/athletes/dechambeau.jpg" },
+  { name: "Kelly Slater", sport: "Surfing", img: "/athletes/kellyslater.jpg" },
+  { name: "Kurt Warner", sport: "NFL", img: "/athletes/kurtwarner.jpg" },
+  { name: "Miesha Tate", sport: "MMA", img: "/athletes/mieshatate.jpg" },
+  { name: "Cris Cyborg", sport: "MMA", img: "/athletes/criscyborg.jpg" },
+  { name: "Lyoto Machida", sport: "MMA", img: "/athletes/machida.jpg" },
+  { name: "Michael Robinson", sport: "NFL", img: "/athletes/mrobinson.jpg" },
+  { name: "Abner Mares", sport: "Boxing", img: "/athletes/abnermares.jpg" },
+  { name: "Elvis Stojko", sport: "Figure Skating", img: "/athletes/stojko.jpg" },
 ];
 
 const RESEARCH_QUESTIONS = [
@@ -71,18 +85,43 @@ export function Athletes() {
           }
         />
 
+        <Reveal>
+          <article className="mt-10 grid gap-6 rounded-3xl border border-white/15 bg-navy-950/50 p-5 sm:p-8 lg:grid-cols-2">
+            <div>
+              <img src="/athletes/celebrity-perspective.jpg" alt="Athlete and celebrity collage from the supplied presentation" loading="lazy" className="w-full rounded-xl" />
+              <details className="mt-4 text-silver-200">
+                <summary className="cursor-pointer text-aqua-200">Watch the celebrity presentation · 4:48</summary>
+                <video controls playsInline preload="none" className="mt-4 max-h-[600px] w-full rounded-xl bg-black" aria-label="Supplied presentation discussing celebrity access and Kangen Water"><source src="/videos/celebrity-perspective.mp4" type="video/mp4" /></video>
+              </details>
+            </div>
+            <div>
+              <div className="kicker">Celebrity perspective</div>
+              <h3 className="mt-3 font-display text-3xl text-silver-100">Access can spark curiosity. Evidence guides the decision.</h3>
+              <p className="mt-4 text-base leading-relaxed text-silver-200">Elite athletes and celebrities often have resources for specialist advice, training, and wellness products that many people cannot easily access. Seeing their choices can prompt useful questions about our own routines.</p>
+              <p className="mt-4 text-base leading-relaxed text-silver-200">The presentation explores that perspective. A celebrity’s appearance in a collage does not establish current use, endorsement, or a health benefit. Access and popularity alone cannot tell us which choices improve health; that requires research.</p>
+              <p className="mt-4 text-sm text-silver-300">The external gallery includes figures such as Manny Pacquiao, Floyd Mayweather, Steven Tyler, and Pat Boone. These are the gallery publisher’s reports, not independently verified endorsements.</p>
+              <a href="https://newtritionny.com/kangen-water-celebrities" target="_blank" rel="noopener noreferrer" className="mt-5 inline-block text-aqua-200 underline underline-offset-4">See the full list of professional athletes and celebrities →</a>
+              <p className="mt-2 text-sm text-silver-400">External promotional gallery; its claims are separate from the research reviewed here.</p>
+            </div>
+          </article>
+        </Reveal>
+
         <motion.ul
           variants={stagger(0.08)}
           initial="hidden"
           whileInView="show"
           viewport={{ once: true, amount: 0.15 }}
-          className="mt-14 grid gap-4 sm:grid-cols-3"
+          className="mt-14 grid grid-cols-2 gap-4 sm:grid-cols-3 lg:grid-cols-5"
         >
           {ATHLETES.map((a) => (
             <motion.li key={a.name} variants={fadeUp}>
               <figure className="group relative overflow-hidden rounded-2xl ring-1 ring-white/10 bg-navy-900">
-                {a.img ? <img src={a.img} alt={a.name} loading="lazy" className="aspect-[4/5] w-full object-cover object-top transition duration-500 group-hover:scale-[1.04]" /> :
-                  <div className="flex aspect-[4/5] items-center justify-center bg-gradient-to-br from-aqua-300/20 to-navy-950 font-display text-7xl text-aqua-100/80" aria-hidden>{a.name.split(" ").map((part) => part[0]).join("")}</div>}
+                <img
+                  src={a.img}
+                  alt={a.name}
+                  loading="lazy"
+                  className="aspect-[4/5] w-full object-cover object-top transition duration-500 group-hover:scale-[1.04]"
+                />
                 <div
                   aria-hidden
                   className="absolute inset-0 bg-gradient-to-t from-navy-950 via-navy-950/20 to-transparent"
@@ -101,9 +140,11 @@ export function Athletes() {
         </motion.ul>
 
         <p className="mt-5 text-center text-xs leading-relaxed text-silver-400/65 max-w-3xl mx-auto">
-          Publicly reported use is not proof of a health or performance effect,
-          and Enagic says celebrities do not have contracts to endorse the company.
-          The LeBron James portrait is a freely licensed Wikimedia Commons image.{" "}
+          This restored gallery brings together public figures previously shown
+          on the site. Some names come from third-party promotional listings;
+          appearance here does not establish current use, a paid endorsement,
+          or a health or performance effect. Portraits were sourced from freely
+          licensed Wikimedia Commons images.{" "}
           <a
             href="/references#topic-athlete-claims"
             className="text-aqua-300 underline decoration-aqua-400/40 underline-offset-4 hover:text-aqua-200"

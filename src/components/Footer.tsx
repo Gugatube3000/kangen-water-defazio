@@ -12,7 +12,7 @@ export function Footer() {
             Dr. David De Fazio
           </div>
           <div className="kicker mt-2">Wellness & Health Optimization</div>
-          <p className="mt-5 text-sm text-silver-300/80 leading-relaxed max-w-sm">
+          <p className="mt-5 text-sm italic text-silver-300/80 leading-relaxed max-w-sm">
             "Life without balance, is Life in pathology."
           </p>
           <p className="mt-4 text-xs text-silver-400/70 leading-relaxed max-w-sm">
@@ -113,7 +113,7 @@ export function Footer() {
               © {year} Dr. David De Fazio · Wellness & Health Optimization
             </p>
             <div className="flex items-center gap-4">
-              <p className="text-[11px] text-silver-400/60 tracking-wide">
+              <p className="text-[11px] italic text-silver-400/60 tracking-wide">
                 "Change your water… change your life."
               </p>
               <span className="text-silver-400/20 text-[11px]">·</span>

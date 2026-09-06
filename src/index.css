@@ -442,3 +442,7 @@ body::after {
     scroll-behavior: auto !important;
   }
 }
+
+/* Quoted passages retain italic emphasis across the educational pages. */
+blockquote, q { font-style: italic; }
+blockquote footer, blockquote cite { font-style: normal; }
