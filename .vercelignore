@@ -19,5 +19,6 @@ dist/
 .git/
 docs/
 *.log
+*.tar.gz
 .DS_Store
 tsconfig.*.tsbuildinfo
