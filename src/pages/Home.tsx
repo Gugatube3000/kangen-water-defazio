@@ -22,14 +22,12 @@ import { PremiumButton } from "@/components/PremiumButton";
 import { Reveal } from "@/components/Reveal";
 import { ChapterTransition } from "@/components/ChapterTransition";
 import { CellularRespiration } from "@/sections/CellularRespiration";
-import { TransparencyDisclosure } from "@/sections/TransparencyDisclosure";
 import { MobileChapter } from "@/components/MobileChapter";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <TransparencyDisclosure />
       <div className="px-5 pb-4 pt-7 md:hidden">
         <div className="mx-auto max-w-xl">
           <div className="kicker">Choose your depth</div>
