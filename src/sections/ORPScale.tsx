@@ -2,8 +2,6 @@ import { motion } from "framer-motion";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Reveal } from "@/components/Reveal";
 import { Cite } from "@/components/Cite";
-import { ScienceVideo } from "@/components/ScienceVideo";
-import { ImageZoom } from "@/components/ImageZoom";
 
 type Marker = {
   label: string;
@@ -182,14 +180,8 @@ export function ORPScale() {
               cells, and it does not identify molecular hydrogen by itself.
             </p>
 
-            <div className="mt-8 grid gap-5 lg:grid-cols-[.88fr_1.12fr] lg:items-center">
-              <ImageZoom
-                src="/evidence-guide/orp-is-not-hydrogen.png"
-                alt="Why a negative ORP is not unique to molecular hydrogen: different reducing substances can also produce negative readings."
-                className="aspect-[2.08/1] bg-[#f7f5ef]"
-                imageClassName="p-3"
-              />
-              <div className="rounded-2xl border border-white/[0.1] bg-white/[0.035] p-5 sm:p-6">
+            <div className="mt-8">
+              <div className="max-w-3xl rounded-2xl border border-white/[0.1] bg-white/[0.035] p-5 sm:p-6">
                 <h4 className="font-display text-2xl text-silver-100">Measure hydrogen separately.</h4>
                 <p className="mt-3 text-sm leading-relaxed text-silver-300/82">
                   ORP can support process monitoring, but it cannot tell you how
@@ -198,15 +190,6 @@ export function ORPScale() {
                   measurement alone establishes a health outcome.
                 </p>
               </div>
-            </div>
-
-            {/* Oxidation in nature — apple, banana, iron, and skin cells */}
-            <div className="mt-8">
-              <ScienceVideo
-                src="/videos/oxidation.mp4"
-                badge="Oxidation in nature"
-                caption="Familiar oxidation can make an abstract redox idea easier to see. Biological oxidation is more regulated and complex than food browning or rust, so the analogy is a starting point—not a literal model of aging."
-              />
             </div>
 
             <div className="mt-8 grid gap-4 sm:grid-cols-3">

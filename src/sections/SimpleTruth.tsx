@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Reveal } from "@/components/Reveal";
 import { Cite } from "@/components/Cite";
-import { RedoxStory } from "@/components/RedoxStory";
+import { ImageZoom } from "@/components/ImageZoom";
 import { fadeUp, stagger } from "@/lib/motion";
 
 const STEPS = [
@@ -71,9 +71,14 @@ export function SimpleTruth() {
         </div>
 
         <Reveal delay={0.08}>
-          <div className="mx-auto mt-12 max-w-5xl">
-            <RedoxStory />
-          </div>
+          <figure className="mx-auto mt-12 max-w-5xl overflow-hidden rounded-3xl border border-white/[0.12] bg-white shadow-2xl">
+            <ImageZoom
+              src="/science/mitochondria-ros-signaling.jpeg"
+              alt="Scientific figure explaining mitochondrial reactive oxygen species, normal signaling, and oxidative stress."
+              className="aspect-square rounded-none border-0 bg-white"
+              imageClassName="object-contain"
+            />
+          </figure>
         </Reveal>
 
         {/* Steps — large numbered editorial list, no cards */}

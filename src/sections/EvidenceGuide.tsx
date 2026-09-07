@@ -5,22 +5,18 @@ import { SectionHeading } from "@/components/SectionHeading";
 
 const GUIDE = [
   {
-    src: "/evidence-guide/evidence-pyramid.png",
     title: "Start with the evidence ladder",
     body: "Cell and animal experiments can suggest mechanisms. Human observational studies ask whether patterns travel into people. Randomized trials and systematic reviews ask progressively harder questions about cause, consistency, and clinical relevance.",
   },
   {
-    src: "/evidence-guide/rct-explained.png",
     title: "Know what randomization does",
     body: "Random assignment and blinding reduce predictable sources of bias. They do not automatically rescue a tiny sample, a weak control, a short follow-up, or an outcome that matters only in a laboratory assay.",
   },
   {
-    src: "/evidence-guide/biomarker-vs-outcome.png",
     title: "A biomarker is not an outcome",
     body: "A change in lactate, antioxidant capacity, inflammation markers, or oxidative-stress measures can be scientifically interesting without proving that a person feels better, performs better, or stays healthier.",
   },
   {
-    src: "/webinar/mhi-metabolic-syndrome-rct-cropped.webp",
     title: "One trial is a lead, not a verdict",
     body: "This 24-week randomized trial in people with metabolic syndrome is more directly relevant than a cell or animal model. It still has to be weighed against its sample, methods, endpoints, replication, and the wider evidence base.",
   },
@@ -64,12 +60,6 @@ export function EvidenceGuide() {
           {GUIDE.map((item, index) => (
             <Reveal key={item.title} delay={(index % 2) * 0.06}>
               <article className="h-full overflow-hidden rounded-3xl border border-white/[0.1] bg-white/[0.04] shadow-glass backdrop-blur-2xl">
-                <ImageZoom
-                  src={item.src}
-                  alt={`${item.title}. Authorized source visual supplied for Dr. De Fazio's educational website.`}
-                  className="aspect-[1.78/1] rounded-none border-0 border-b border-white/[0.08] bg-white"
-                  imageClassName="object-contain p-2 sm:p-4"
-                />
                 <div className="p-6 sm:p-7">
                   <div className="font-mono text-xs text-aqua-300/75">
                     {String(index + 1).padStart(2, "0")}
@@ -102,10 +92,10 @@ export function EvidenceGuide() {
               </p>
             </div>
             <ImageZoom
-              src="/evidence-guide/evidence-80-20.png"
-              alt="Hydrogen belongs on top of health foundations, not in place of movement, nutrition, sleep, stress management, and connection."
-              className="aspect-[1.42/1] bg-[#f7f5ef]"
-              imageClassName="p-3 sm:p-5"
+              src="/webinar/mhi-metabolic-syndrome-rct-cropped.webp"
+              alt="Authorized Molecular Hydrogen Institute webinar slide summarizing a randomized trial in people with metabolic syndrome."
+              className="aspect-[1.78/1] bg-white"
+              imageClassName="object-contain"
             />
           </div>
         </Reveal>

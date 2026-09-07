@@ -207,14 +207,8 @@ export function MolecularHydrogen() {
         </Reveal>
 
         <Reveal>
-          <div className="mt-10 grid gap-5 rounded-3xl border border-white/[0.1] bg-white/[0.035] p-5 sm:p-7 lg:grid-cols-[1.25fr_.75fr] lg:items-center">
-            <ImageZoom
-              src="/evidence-guide/hydrogen-history.png"
-              alt="Short history of molecular-hydrogen research, from early observations to modern human trials and systematic reviews."
-              className="aspect-[1.96/1] bg-[#f7f5ef]"
-              imageClassName="p-3 sm:p-4"
-            />
-            <div>
+          <div className="mt-10 rounded-3xl border border-white/[0.1] bg-white/[0.035] p-6 sm:p-8">
+            <div className="max-w-3xl">
               <div className="kicker">A small field with a long backstory</div>
               <h3 className="mt-3 font-display text-3xl text-silver-100">History is context, not evidence strength.</h3>
               <p className="mt-3 text-sm leading-relaxed text-silver-300/82">

@@ -1,6 +1,5 @@
 import { motion } from "framer-motion";
 import { Cite } from "@/components/Cite";
-import { RedoxStory } from "@/components/RedoxStory";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
 import { ImageZoom } from "@/components/ImageZoom";
@@ -47,9 +46,14 @@ export function FreeRadicals() {
         />
 
         <Reveal>
-          <div className="mx-auto mt-12 max-w-5xl">
-            <RedoxStory />
-          </div>
+          <figure className="mx-auto mt-12 max-w-5xl overflow-hidden rounded-3xl border border-white/[0.12] bg-white shadow-2xl">
+            <ImageZoom
+              src="/science/oxidative-stress-cellular-injury.jpeg"
+              alt="Scientific figure showing cellular injury, DNA damage, and inflammation associated with oxidative stress."
+              className="aspect-[1.2/1] rounded-none border-0 bg-white"
+              imageClassName="object-contain"
+            />
+          </figure>
         </Reveal>
 
         <Reveal>

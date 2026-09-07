@@ -3,7 +3,6 @@ import { Reveal } from "@/components/Reveal";
 import { PremiumButton } from "@/components/PremiumButton";
 import {
   libraryItems,
-  moduleOneStoryboardFrames,
   moduleScriptDrafts,
   lectureDeck,
   selectiveAntioxidant,
@@ -49,30 +48,6 @@ const publicLessonSummaries = [
   "Understand molecular hydrogen, negative ORP, electron donation, and cellular energy in careful, plain language.",
   "See oxidation and free radicals in simple terms, then learn how reducing potential fits into the water-quality conversation.",
 ];
-
-function ModuleVisual({ index }: { index: number }) {
-  const frame =
-    moduleOneStoryboardFrames[index % moduleOneStoryboardFrames.length];
-
-  return (
-    <div className="relative aspect-video overflow-hidden rounded-lg border border-white/[0.08] bg-navy-950/55">
-      <img
-        src={frame.assetHref}
-        alt=""
-        width={1920}
-        height={1080}
-        className="h-full w-full object-cover opacity-[0.88]"
-        loading="lazy"
-      />
-      <div className="absolute inset-0 bg-gradient-to-t from-navy-950/72 via-transparent to-transparent" />
-      <div className="absolute bottom-3 left-3 right-3">
-        <div className="text-[10px] uppercase tracking-ultra text-aqua-200/80">
-          {frame.label}
-        </div>
-      </div>
-    </div>
-  );
-}
 
 export default function Library() {
   return (
@@ -199,7 +174,9 @@ export default function Library() {
                 className="min-w-0"
               >
                 <article className="flex h-full min-w-0 flex-col overflow-hidden rounded-lg border border-white/[0.1] bg-white/[0.045] shadow-glass backdrop-blur-2xl">
-                  <ModuleVisual index={index} />
+                  <div className="flex aspect-video items-center justify-center rounded-lg border border-white/[0.08] bg-navy-950/55">
+                    <span className="font-display text-7xl text-aqua-300/25">{String(index + 1).padStart(2, "0")}</span>
+                  </div>
                   <div className="flex flex-1 min-w-0 flex-col p-5 md:p-6">
                     <div className="flex min-w-0 flex-wrap items-center gap-2">
                       <span className="inline-flex min-h-9 items-center rounded-full border border-aqua-300/20 bg-aqua-300/[0.07] px-3 text-[11px] font-medium text-aqua-200">
@@ -243,55 +220,6 @@ export default function Library() {
                     </div>
                   </div>
                 </article>
-              </Reveal>
-            ))}
-          </div>
-
-          <div className="mb-8 min-w-0">
-            <div className="kicker">Visual Guide</div>
-            <h2 className="mt-3 max-w-4xl font-display text-4xl leading-tight text-silver-100 md:text-5xl">
-              The first lesson in pictures.
-            </h2>
-            <p className="mt-4 max-w-3xl text-sm leading-relaxed text-silver-300/80">
-              A simple visual walk-through of the core idea: the body is mostly
-              water, not all water is equal, and the process that creates ERW
-              matters.
-            </p>
-          </div>
-
-          <div className="mobile-snap-row mb-10 grid min-w-0 gap-4 sm:grid-cols-2 md:mb-14 lg:grid-cols-4">
-            {moduleOneStoryboardFrames.map((frame, index) => (
-              <Reveal
-                key={frame.number}
-                delay={(index % 4) * 0.035}
-                className="min-w-0"
-              >
-                <a
-                  href={frame.assetHref}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="group block min-w-0 overflow-hidden rounded-lg border border-white/[0.1] bg-white/[0.045] shadow-glass backdrop-blur-2xl transition duration-300 hover:-translate-y-1 hover:border-aqua-300/35"
-                >
-                  <img
-                    src={frame.assetHref}
-                    alt={`${frame.label} visual guide`}
-                    width={1920}
-                    height={1080}
-                    className="aspect-video w-full object-contain bg-navy-950/65"
-                    loading="lazy"
-                  />
-                  <div className="p-4">
-                    <div className="text-[10px] uppercase tracking-ultra text-aqua-300/80">
-                      Step {frame.number}
-                    </div>
-                    <h3 className="mt-2 font-display text-2xl leading-tight text-silver-100">
-                      {frame.label}
-                    </h3>
-                    <p className="mt-2 text-xs leading-relaxed text-silver-300/75">
-                      {frame.caption}
-                    </p>
-                  </div>
-                </a>
               </Reveal>
             ))}
           </div>

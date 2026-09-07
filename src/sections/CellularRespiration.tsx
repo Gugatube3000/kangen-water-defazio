@@ -1,6 +1,5 @@
-import { ActionPotential, ROSDiagram, OxidativeDamage } from "@/components/CellScienceIllustrations";
 import { Cite } from "@/components/Cite";
-import { MitochondrialRespirationStory } from "@/components/MitochondrialRespirationStory";
+import { ImageZoom } from "@/components/ImageZoom";
 import { Reveal } from "@/components/Reveal";
 import { SectionHeading } from "@/components/SectionHeading";
 import { RespirationStageExplorer } from "@/components/RespirationStageExplorer";
@@ -20,9 +19,10 @@ export function CellularRespiration({ compactIntro = false }: CellularRespiratio
         <Reveal>
           <article className="mt-12 overflow-hidden rounded-[2rem] border border-aqua-200/20 bg-[#0B2540]/82 shadow-2xl shadow-navy-950/25 md:mt-16">
             <div className="grid lg:grid-cols-[.92fr_1.08fr]">
-              <div className="relative min-h-[340px] overflow-hidden border-b border-white/[.08] bg-[radial-gradient(circle_at_50%_45%,rgba(111,215,230,.16),transparent_58%)] p-7 sm:p-10 lg:border-b-0 lg:border-r">
+              <div className="relative flex min-h-[340px] flex-col justify-center overflow-hidden border-b border-white/[.08] bg-[radial-gradient(circle_at_50%_45%,rgba(111,215,230,.16),transparent_58%)] p-7 sm:p-10 lg:border-b-0 lg:border-r">
                 <div className="kicker">Bioelectricity · ions in motion</div>
-                <ActionPotential />
+                <h3 className="mt-5 font-display text-3xl leading-tight text-silver-100 sm:text-4xl">Your cells create electrical signals by moving charged ions.</h3>
+                <p className="mt-5 text-sm leading-relaxed text-silver-300/82">A cell membrane separates different concentrations of sodium, potassium, calcium, and chloride. When protein channels open, ions cross the membrane and briefly change its voltage. That traveling voltage change is an action potential.</p>
               </div>
 
               <div className="p-7 sm:p-10">
@@ -59,7 +59,19 @@ export function CellularRespiration({ compactIntro = false }: CellularRespiratio
           </article>
         </Reveal>
 
-        <Reveal><div className="mt-12 md:mt-16"><MitochondrialRespirationStory /></div></Reveal>
+        <Reveal>
+          <figure className="mt-12 overflow-hidden rounded-[2rem] border border-white/[0.12] bg-white shadow-2xl md:mt-16">
+            <ImageZoom
+              src="/science/mitochondrial-ros-production.jpeg"
+              alt="Scientific figure showing mitochondrial electron transport, reactive oxygen species production, antioxidant defenses, controlled signaling, and oxidative stress."
+              className="aspect-[1.78/1] rounded-none border-0 bg-white"
+              imageClassName="object-contain"
+            />
+            <figcaption className="border-t border-slate-200 bg-white px-6 py-5 text-sm leading-relaxed text-slate-700 sm:px-8">
+              Mitochondrial ROS production: normal electron flow can generate reactive oxygen species. At controlled levels they participate in signaling; excess production can overwhelm antioxidant defenses.
+            </figcaption>
+          </figure>
+        </Reveal>
         <Reveal><div className="mt-8"><RespirationStageExplorer /></div></Reveal>
 
         <Reveal>
@@ -75,18 +87,37 @@ export function CellularRespiration({ compactIntro = false }: CellularRespiratio
               </p>
             </article>
 
-            <aside className="rounded-[1.75rem] border border-white/[.1] bg-[#10243B]/75 p-6 sm:p-8">
+            <aside className="overflow-hidden rounded-[1.75rem] border border-white/[.1] bg-[#10243B]/75">
+              <ImageZoom
+                src="/science/mitochondria-ros-signaling.jpeg"
+                alt="Scientific figure identifying major mitochondrial sources of reactive oxygen species and contrasting normal signaling with oxidative stress."
+                className="aspect-square rounded-none border-0 bg-white"
+                imageClassName="object-contain"
+              />
+              <div className="p-6 sm:p-8">
               <div className="kicker">A crucial distinction</div>
               <h3 className="mt-4 font-display text-2xl text-silver-100">ROS are signals and stressors.</h3>
-              <ROSDiagram />
               <p className="mt-4 text-sm leading-relaxed text-silver-300/82">
                 Mitochondria can generate superoxide and hydrogen peroxide at several sites, including respiratory complexes I and III. Controlled ROS participate in normal signaling. Oxidative stress describes the damaging imbalance that arises when oxidant production exceeds the cell’s control and repair capacity. <Cite ids={[49, 52]} />
               </p>
+              </div>
             </aside>
           </div>
         </Reveal>
 
-        <Reveal><OxidativeDamage /></Reveal>
+        <Reveal>
+          <figure className="mt-10 overflow-hidden rounded-[1.75rem] border border-white/[0.12] bg-white shadow-2xl">
+            <ImageZoom
+              src="/science/oxidative-stress-cellular-injury.jpeg"
+              alt="Scientific figure showing how excess reactive oxygen species can damage membranes, proteins, DNA, and cellular organelles and promote inflammation."
+              className="aspect-[1.2/1] rounded-none border-0 bg-white"
+              imageClassName="object-contain"
+            />
+            <figcaption className="border-t border-slate-200 bg-white px-6 py-5 text-sm leading-relaxed text-slate-700 sm:px-8">
+              When reactive oxygen species exceed the cell’s antioxidant and repair capacity, oxidative stress can damage membranes, proteins, DNA, and organelles and contribute to inflammatory signaling.
+            </figcaption>
+          </figure>
+        </Reveal>
 
         <Reveal>
           <div className="mt-10 rounded-[1.75rem] border border-white/[.1] bg-[#0C2037]/80 p-6 sm:p-8">
