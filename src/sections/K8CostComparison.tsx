@@ -4,6 +4,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { Reveal } from "@/components/Reveal";
 import { K8_PRICE, K8_PRICE_AMOUNT } from "@/lib/enagic";
 import { calculateWaterCosts } from "@/lib/waterCosts";
+import { PrioritiesClip } from "@/sections/PrioritiesClip";
 
 const K8_MACHINE_COST = K8_PRICE_AMOUNT;
 const ANNUAL_FILTER_COST = 300; // Illustrative maintenance allowance, not a quote.
@@ -123,6 +124,8 @@ export function K8CostComparison() {
           }
           subtitle="A family vacation and a home water system serve different priorities. Neither choice needs defending. Start with your budget and actual water spending, then use this illustration to decide whether the numbers make sense for you."
         />
+
+        <PrioritiesClip />
 
         {/* Interactive controls */}
         <Reveal>
