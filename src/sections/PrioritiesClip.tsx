@@ -11,12 +11,14 @@ export function PrioritiesClip() {
         <div className="mx-auto grid max-w-6xl overflow-hidden rounded-[2rem] border border-white/[0.12] bg-[#0B1E36]/82 shadow-2xl shadow-navy-950/25 md:grid-cols-[0.82fr_1.18fr]">
           <div className="flex flex-col justify-center p-6 sm:p-9 md:p-10 lg:p-12">
             <div className="kicker">Perspective · priorities</div>
-            <h3
+            <blockquote
               id="priorities-title"
-              className="mt-4 font-display text-3xl leading-tight text-silver-100 sm:text-4xl"
+              className="mt-4 font-display text-3xl italic leading-tight text-silver-100 sm:text-4xl"
             >
-              Put the big things in first.
-            </h3>
+              “We don’t lose the important things because we don’t love them;
+              we lose them because we keep making room for things that matter
+              less.”
+            </blockquote>
             <p className="mt-5 text-sm leading-relaxed text-silver-300/82 sm:text-base">
               The familiar jar demonstration makes one point clearly: when the
               small demands fill every space first, the priorities that matter
@@ -25,7 +27,15 @@ export function PrioritiesClip() {
             </p>
             <p className="mt-5 text-xs leading-relaxed text-silver-400/72">
               Revised from the supplied clip with a cleaner frame, a smaller
-              caption treatment, and improved playback quality.
+              caption treatment, and improved playback quality. {" "}
+              <a
+                href="https://youtu.be/SqGRnlXplx0"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-aqua-200 underline underline-offset-4"
+              >
+                Watch the original video on YouTube ↗
+              </a>
             </p>
           </div>
 
