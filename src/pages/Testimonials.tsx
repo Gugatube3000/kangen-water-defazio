@@ -11,10 +11,10 @@ export default function Testimonials() {
           <SectionHeading
             kicker="Stories · People behind the questions"
             title={<>Personal experiences.<br /><em className="not-italic text-aqua-300">A closer look.</em></>}
-            subtitle="A family photograph, a physician’s turning point, and voices from public interviews. Explore what people describe, where each account comes from, and what it can tell us."
+            subtitle="Family photographs, a physician’s turning point, and voices from public interviews. Explore what people describe, where each account comes from, and what it can tell us."
           />
           <nav aria-label="Browse stories" className="mt-8 flex flex-wrap justify-center gap-3 text-sm">
-            {[["family-dog", "The family dog"], ["doctor-story", "Dr. De Fazio"], ["public-voices", "Public voices"]].map(([id, label]) => <a key={id} href={`#${id}`} className="rounded-full border border-aqua-200/25 bg-navy-950/50 px-5 py-3 text-aqua-100 transition hover:bg-aqua-300/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-aqua-200">{label} <span aria-hidden="true">↗</span></a>)}
+            {[["family-dog", "The family dog"], ["family-foot", "Diabetic foot story"], ["doctor-story", "Dr. De Fazio"], ["public-voices", "Public voices"]].map(([id, label]) => <a key={id} href={`#${id}`} className="rounded-full border border-aqua-200/25 bg-navy-950/50 px-5 py-3 text-aqua-100 transition hover:bg-aqua-300/15 focus-visible:outline focus-visible:outline-2 focus-visible:outline-aqua-200">{label} <span aria-hidden="true">↗</span></a>)}
           </nav>
           <p className="mx-auto mt-7 max-w-3xl text-center text-sm leading-relaxed text-silver-200/85">These are individual accounts, not controlled studies or promises of results. Dr. De Fazio is an independent distributor and may receive compensation from purchases through his organization.</p>
         </div>
@@ -48,10 +48,39 @@ export default function Testimonials() {
           </Reveal>
 
           <Reveal>
+            <article id="family-foot" className="scroll-mt-28 overflow-hidden rounded-[2rem] border border-amber-200/20 bg-[#0b2339]/95 shadow-2xl shadow-navy-950/20">
+              <div className="flex flex-wrap items-center justify-between gap-3 border-b border-white/10 px-6 py-5 sm:px-9">
+                <span className="kicker">02 · Family medical story</span>
+                <span className="rounded-full border border-white/15 px-3 py-1 text-sm text-silver-200">Reported by Dr. De Fazio</span>
+              </div>
+              <div className="grid gap-0 lg:grid-cols-[1.05fr_1fr]">
+                <figure className="p-5 sm:p-8 lg:border-r lg:border-white/10">
+                  <div className="grid grid-cols-2 gap-3 sm:gap-4">
+                    <img src="/stories/diabetic-foot-clinical-view-a.webp" alt="Clinical photograph of a plantar diabetic foot ulcer being examined by a gloved clinician." width="960" height="1280" loading="lazy" className="aspect-[3/4] w-full rounded-xl bg-navy-950 object-cover" />
+                    <img src="/stories/diabetic-foot-clinical-view-b.webp" alt="Supplied follow-up photograph of the same plantar area with a smaller visible opening that is not fully closed." width="960" height="1280" loading="lazy" className="aspect-[3/4] w-full rounded-xl bg-navy-950 object-cover" />
+                  </div>
+                  <figcaption className="mt-4 text-sm leading-relaxed text-silver-300">Two clinical photographs supplied by the family. A wound remains visible in both images; the photographs have no dates or medical-record annotations.</figcaption>
+                </figure>
+                <div className="px-6 pb-8 sm:px-9 lg:py-9">
+                  <h2 className="font-display text-3xl leading-tight text-silver-100 sm:text-4xl">A diabetic foot ulcer.<br /><span className="text-aqua-200">Care happened on several fronts.</span></h2>
+                  <p className="mt-5 text-base leading-relaxed text-silver-200">Dr. De Fazio reports that his father-in-law, who has diabetes, was evaluated by a podiatrist for a plantar ulcer. The podiatrist referred him for endocrinology and infectious-disease care, planned antibiotic treatment, and ordered an MRI to evaluate possible osteomyelitis.</p>
+                  <p className="mt-4 text-base leading-relaxed text-silver-200">While that medical workup was underway, Dr. De Fazio says the family also used strong acidic electrolyzed water topically. He reports that the MRI performed about a week later did not show osteomyelitis, that the wound later closed after a period complicated by continued pressure on the foot, and that a measured HbA1c changed from 8.3% to 6.6% over six weeks while he was drinking Kangen water.</p>
+                  <blockquote className="mt-6 border-l-2 border-aqua-200/60 pl-5 font-display text-xl italic leading-relaxed text-aqua-100">“We saw the wound improve while he remained under medical evaluation and diabetes care.”</blockquote>
+                  <div className="mt-6 rounded-2xl border border-amber-200/20 bg-amber-100/[0.05] p-5">
+                    <h3 className="font-semibold text-silver-100">How to read this account</h3>
+                    <p className="mt-2 text-sm leading-relaxed text-silver-300">The sequence documents a family experience, not the effect of one treatment. A negative MRI does not show that a topical soak prevented bone infection. The photographs do not document complete closure, and no records were supplied to establish treatment timing, off-loading, antibiotic use, glucose-management changes, or the cause of the HbA1c change. HbA1c reflects average glucose over roughly three months.</p>
+                    <p className="mt-3 text-sm leading-relaxed text-silver-300">This is not a wound-care protocol. Diabetes-related foot ulcers need prompt clinician-directed care; current guidance emphasizes infection assessment, appropriate antibiotics when infection is present, wound care, pressure off-loading, vascular assessment, and glycemic management. <a href="https://www.idsociety.org/practice-guideline/diabetic-foot-infections/" target="_blank" rel="noopener noreferrer" className="text-aqua-200 underline underline-offset-4">Read the IWGDF/IDSA guideline ↗</a> <a href="https://www.cdc.gov/diabetes/diabetes-complications/diabetes-and-your-feet.html" target="_blank" rel="noopener noreferrer" className="ml-2 text-aqua-200 underline underline-offset-4">CDC foot-care guidance ↗</a></p>
+                  </div>
+                </div>
+              </div>
+            </article>
+          </Reveal>
+
+          <Reveal>
             <article id="doctor-story" className="scroll-mt-28 grid overflow-hidden rounded-[2rem] border border-white/15 bg-[#0b2339]/90 md:grid-cols-[.65fr_1fr]">
               <img src="/doctor/dr-david-defazio.jpg" alt="Dr. David De Fazio in clinical attire" loading="lazy" className="h-80 w-full object-cover object-top md:h-full md:max-h-[640px]" />
               <div className="p-6 sm:p-9">
-                <div className="kicker">02 · A physician’s perspective</div>
+                <div className="kicker">03 · A physician’s perspective</div>
                 <h2 className="mt-4 font-display text-3xl leading-tight text-silver-100 sm:text-4xl">The health question that became a personal journey.</h2>
                 <p className="mt-5 text-base leading-relaxed text-silver-200">In 2018, Dr. De Fazio developed persistent, high-frequency tinnitus. In his supplied biography, he describes how the search for answers broadened his interest in wellness, hydration, and the everyday environment.</p>
                 <p className="mt-4 text-base leading-relaxed text-silver-200">Later, questions raised during a screening led him to read his municipal water report and contact his city. That curiosity helped shape this educational project.</p>
@@ -71,7 +100,7 @@ export default function Testimonials() {
             <div className="grid gap-6 lg:grid-cols-2">
               <Reveal>
                 <article className="flex h-full flex-col rounded-[2rem] border border-aqua-200/20 bg-[#102d43]/95 p-6 sm:p-8">
-                  <div className="flex items-center justify-between gap-3"><span className="kicker">03 · Published interview</span><span className="font-display text-3xl text-aqua-200/50" aria-hidden="true">“</span></div>
+                  <div className="flex items-center justify-between gap-3"><span className="kicker">04 · Published interview</span><span className="font-display text-3xl text-aqua-200/50" aria-hidden="true">“</span></div>
                   <h3 className="mt-5 font-display text-3xl text-silver-100">Giancarlo Giammetti</h3>
                   <p className="mt-2 text-sm text-silver-300">Former Valentino chairman · GQ, November 2013</p>
                   <blockquote className="my-7 font-display text-2xl italic leading-relaxed text-aqua-100">“Somebody suggested to me that I get one and I've been using it for a year now.”</blockquote>
@@ -83,7 +112,7 @@ export default function Testimonials() {
                 <article className="flex h-full flex-col overflow-hidden rounded-[2rem] border border-white/15 bg-[#0b2339]/95">
                   <iframe src="https://player.vimeo.com/video/204373726" title="Michael Robinson discusses Kangen water with Shan Stratton — promotional interview" loading="lazy" className="aspect-video w-full border-0 bg-black" allow="fullscreen; picture-in-picture" allowFullScreen />
                   <div className="p-6 sm:p-8">
-                    <div className="kicker">04 · Video interview</div>
+                    <div className="kicker">05 · Video interview</div>
                     <h3 className="mt-4 font-display text-3xl text-silver-100">Michael Robinson</h3>
                     <p className="mt-2 text-sm text-silver-300">Former Seattle Seahawks player · Uploaded by Hydrationcrew</p>
                     <p className="mt-4 text-base leading-relaxed text-silver-200">Robinson discusses Kangen water with Shan Stratton in this publicly available interview. Watch the conversation in its original player rather than relying on a celebrity collage.</p>
