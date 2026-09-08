@@ -23,6 +23,7 @@ import { Reveal } from "@/components/Reveal";
 import { ChapterTransition } from "@/components/ChapterTransition";
 import { CellularRespiration } from "@/sections/CellularRespiration";
 import { MobileChapter } from "@/components/MobileChapter";
+import { PrioritiesClip } from "@/sections/PrioritiesClip";
 
 export default function Home() {
   return (
@@ -89,6 +90,7 @@ export default function Home() {
           attribution="Dr. Raymond Nichols"
           note="Excerpted from the social post supplied for this guide."
         />
+        <PrioritiesClip />
         <TapWaterPipe />
       </MobileChapter>
 
