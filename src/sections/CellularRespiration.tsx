@@ -8,7 +8,7 @@ type CellularRespirationProps = { compactIntro?: boolean };
 
 export function CellularRespiration({ compactIntro = false }: CellularRespirationProps) {
   return (
-    <section data-section="cellular" data-section-label="Cellular Respiration" className={`${compactIntro ? "px-5 py-14 sm:px-10 md:py-20 lg:px-16" : "section-pad"} relative`}>
+    <section id="cellular" data-section="cellular" data-section-label="Cellular Respiration" className={`${compactIntro ? "px-5 py-14 sm:px-10 md:py-20 lg:px-16" : "section-pad"} relative scroll-mt-24`}>
       <div className="mx-auto max-w-7xl">
         <SectionHeading
           kicker="Cellular respiration · the central map"

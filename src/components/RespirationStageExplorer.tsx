@@ -36,7 +36,7 @@ export function RespirationStageExplorer() {
     <section aria-labelledby="respiration-stage-title" className="overflow-hidden rounded-[2rem] border border-white/[0.13] bg-[#0B1E36]/82 shadow-2xl shadow-navy-950/25">
       <div className="border-b border-white/[0.08] p-5 sm:p-7">
         <div className="kicker">Click or tap each stage</div>
-        <h3 id="respiration-stage-title" className="mt-3 font-display text-3xl text-silver-100 sm:text-4xl">
+        <h3 id="respiration-stage-title" className="mt-3 scroll-mt-24 font-display text-3xl text-silver-100 sm:text-4xl">
           Four stages, one continuous system.
         </h3>
         <p className="mt-3 max-w-3xl text-sm leading-relaxed text-silver-300/80">

@@ -36,6 +36,11 @@ export function MobileChapter({
       const target = document.getElementById(id);
       if (target && detailsRef.current.contains(target)) {
         setOpen(true);
+        window.requestAnimationFrame(() => {
+          window.requestAnimationFrame(() => {
+            target.scrollIntoView({ block: "start" });
+          });
+        });
       }
     };
 
