@@ -230,6 +230,9 @@ export default function Library() {
             <h2 className="mt-3 max-w-3xl font-display text-4xl leading-tight text-silver-100 md:text-5xl">
               {selectiveAntioxidant.title}
             </h2>
+            <p className="mt-4 max-w-3xl border-l-2 border-aqua-300/70 pl-4 font-display text-2xl leading-snug text-aqua-100 md:text-3xl">
+              {selectiveAntioxidant.dailyFraming}
+            </p>
             <p className="mt-4 max-w-3xl text-sm leading-relaxed text-silver-300/82">
               {selectiveAntioxidant.intro}
             </p>

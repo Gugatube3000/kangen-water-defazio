@@ -590,6 +590,27 @@ export const CITATIONS: Citation[] = [
     url: "https://pubmed.ncbi.nlm.nih.gov/38590828/",
     doctorNote: "Six studies with 76 participants found no significant reduction in the measured oxidative-stress marker d-ROMs, while a small pooled improvement appeared in biological antioxidant potential. The evidence remains limited and heterogeneous.",
   },
+  {
+    id: 61,
+    topic: "Bioelectricity",
+    authors: "Tennant JL, MD.",
+    title: "Healing as Voltage: The Physics of Emotions — EU2017 presentation",
+    source: "EU2017 Future Science Conference; Thunderbolts Project recording.",
+    url: "https://www.thunderbolts.info/wp/2023/09/16/dr-jerry-tennant-healing-as-voltage-eu2017/",
+    doctorNote:
+      "Tennant's whole-body voltage framework is presented as his proposed model, not as an established clinical definition of disease or healing.",
+  },
+  {
+    id: 62,
+    topic: "Bioelectricity",
+    authors: "Levin M, Pezzulo G, Finkelstein JM.",
+    title:
+      "Endogenous Bioelectric Signaling Networks: Exploiting Voltage Gradients for Control of Growth and Form",
+    source: "Annual Review of Biomedical Engineering. 2017;19:353–387.",
+    url: "https://pubmed.ncbi.nlm.nih.gov/28633567/",
+    doctorNote:
+      "Review of endogenous bioelectric signaling in pattern formation, tissue growth, and regeneration. This literature does not establish universal clinical voltage thresholds for health or disease.",
+  },
 ];
 
 export function citationById(id: number): Citation | undefined {

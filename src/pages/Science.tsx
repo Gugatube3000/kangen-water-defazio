@@ -24,9 +24,9 @@ export default function Science() {
         </div>
       </section>
 
-      <div className="px-5 pb-4 md:hidden">
-        <p className="mx-auto max-w-xl text-sm leading-relaxed text-silver-300/75">
-          Choose a chapter for the full diagrams and source-backed explanation.
+      <div className="px-5 pb-6 md:px-10 md:pb-9 lg:px-16">
+        <p className="mx-auto max-w-7xl text-sm leading-relaxed text-silver-300/75 md:text-base">
+          Scroll the topics and expand any chapter for its full diagrams and source-backed explanation.
         </p>
       </div>
 

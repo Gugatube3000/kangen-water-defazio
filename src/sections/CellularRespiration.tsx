@@ -56,22 +56,62 @@ export function CellularRespiration({ compactIntro = false }: CellularRespiratio
                 </p>
               </div>
             </div>
+
+            <div className="border-t border-white/[.08] bg-[linear-gradient(135deg,rgba(111,215,230,.07),rgba(255,255,255,.018))] px-7 py-8 sm:px-10 sm:py-10">
+              <div className="grid gap-8 lg:grid-cols-[.78fr_1.22fr] lg:items-start">
+                <div>
+                  <div className="kicker">An interpretive lens · clearly labeled</div>
+                  <h3 className="mt-4 font-display text-2xl leading-tight text-silver-100 sm:text-3xl">
+                    Where “healing is voltage” fits—and where it goes further.
+                  </h3>
+                  <p className="mt-4 text-sm leading-relaxed text-silver-300/82">
+                    Dr. Jerry Tennant uses a memorable chain—electrical potential → cellular function → energy → repair—to connect bioelectricity with health. It is a useful prompt for exploring cell biology, but the whole-body disease framework and his specific voltage thresholds are <strong className="text-silver-100">Tennant’s proposed model</strong>, not universal clinical reference ranges. <Cite ids={61} />
+                  </p>
+                  <a
+                    href="https://www.youtube.com/watch?v=e9CabCf0jB0&t=460s"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="mt-5 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[.14em] text-aqua-200 transition hover:text-aqua-100"
+                  >
+                    Watch the core bridge · 07:40–18:54 <span aria-hidden>↗</span>
+                  </a>
+                </div>
+
+                <div className="grid gap-3 sm:grid-cols-3">
+                  {[
+                    {
+                      label: "Established",
+                      title: "Cells are electrochemical systems.",
+                      body: "Ion gradients create membrane potentials; mitochondrial proton gradients help drive ATP synthesis.",
+                      tone: "border-aqua-200/20 bg-aqua-300/[.055]",
+                    },
+                    {
+                      label: "Actively studied",
+                      title: "Voltage can carry biological information.",
+                      body: "Endogenous bioelectric signals influence growth, patterning, cell migration, wound healing, and regeneration in experimental systems.",
+                      tone: "border-white/[.1] bg-white/[.035]",
+                    },
+                    {
+                      label: "Keep distinct",
+                      title: "pH, redox state, and voltage are related—not interchangeable.",
+                      body: "Each describes a different property and requires its own measurement. No single millivolt value diagnoses chronic disease.",
+                      tone: "border-amber-200/20 bg-amber-200/[.045]",
+                    },
+                  ].map(({ label, title, body, tone }) => (
+                    <article key={label} className={`rounded-2xl border p-5 ${tone}`}>
+                      <div className="text-[10px] font-semibold uppercase tracking-[.16em] text-aqua-300/85">{label}</div>
+                      <h4 className="mt-3 font-display text-lg leading-snug text-silver-100">{title}</h4>
+                      <p className="mt-3 text-xs leading-relaxed text-silver-300/78">
+                        {body} {label === "Actively studied" && <Cite ids={62} />}
+                      </p>
+                    </article>
+                  ))}
+                </div>
+              </div>
+            </div>
           </article>
         </Reveal>
 
-        <Reveal>
-          <figure className="mt-12 overflow-hidden rounded-[2rem] border border-white/[0.12] bg-white shadow-2xl md:mt-16">
-            <ImageZoom
-              src="/science/mitochondrial-ros-production.jpeg"
-              alt="Scientific figure showing mitochondrial electron transport, reactive oxygen species production, antioxidant defenses, controlled signaling, and oxidative stress."
-              className="aspect-[1.78/1] rounded-none border-0 bg-white"
-              imageClassName="object-contain"
-            />
-            <figcaption className="border-t border-slate-200 bg-white px-6 py-5 text-sm leading-relaxed text-slate-700 sm:px-8">
-              Mitochondrial ROS production: normal electron flow can generate reactive oxygen species. At controlled levels they participate in signaling; excess production can overwhelm antioxidant defenses.
-            </figcaption>
-          </figure>
-        </Reveal>
         <Reveal><div className="mt-8"><RespirationStageExplorer /></div></Reveal>
 
         <Reveal>
@@ -103,20 +143,6 @@ export function CellularRespiration({ compactIntro = false }: CellularRespiratio
               </div>
             </aside>
           </div>
-        </Reveal>
-
-        <Reveal>
-          <figure className="mt-10 overflow-hidden rounded-[1.75rem] border border-white/[0.12] bg-white shadow-2xl">
-            <ImageZoom
-              src="/science/oxidative-stress-cellular-injury.jpeg"
-              alt="Scientific figure showing how excess reactive oxygen species can damage membranes, proteins, DNA, and cellular organelles and promote inflammation."
-              className="aspect-[1.2/1] rounded-none border-0 bg-white"
-              imageClassName="object-contain"
-            />
-            <figcaption className="border-t border-slate-200 bg-white px-6 py-5 text-sm leading-relaxed text-slate-700 sm:px-8">
-              When reactive oxygen species exceed the cell’s antioxidant and repair capacity, oxidative stress can damage membranes, proteins, DNA, and organelles and contribute to inflammatory signaling.
-            </figcaption>
-          </figure>
         </Reveal>
 
         <Reveal>

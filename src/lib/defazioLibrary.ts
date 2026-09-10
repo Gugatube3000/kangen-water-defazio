@@ -1239,6 +1239,8 @@ export const lectureDeck = {
 export const selectiveAntioxidant = {
   kicker: "From David's notes · Molecular Hydrogen",
   title: "The “selective antioxidant” idea",
+  dailyFraming:
+    "“Your daily antioxidant support; delivered in a glass, not a grocery cart.”",
   intro:
     "One concept David keeps returning to is that molecular hydrogen (H₂) may not behave like an ordinary antioxidant. Rather than mopping up every reactive molecule, the research interest is whether it preferentially interacts with the most damaging oxidants while leaving useful redox signaling intact. This is the educational framing associated with Tyler LeBaron and the Molecular Hydrogen Institute.",
   points: [

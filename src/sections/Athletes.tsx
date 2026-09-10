@@ -86,19 +86,12 @@ export function Athletes() {
         />
 
         <Reveal>
-          <article className="mt-10 grid gap-6 rounded-3xl border border-white/15 bg-navy-950/50 p-5 sm:p-8 lg:grid-cols-2">
-            <div>
-              <img src="/athletes/celebrity-perspective.jpg" alt="Athlete and celebrity collage from the supplied presentation" loading="lazy" className="w-full rounded-xl" />
-              <details className="mt-4 text-silver-200">
-                <summary className="cursor-pointer text-aqua-200">Watch the celebrity presentation · 4:48</summary>
-                <video controls playsInline preload="none" className="mt-4 max-h-[600px] w-full rounded-xl bg-black" aria-label="Supplied presentation discussing celebrity access and Kangen Water"><source src="/videos/celebrity-perspective.mp4" type="video/mp4" /></video>
-              </details>
-            </div>
-            <div>
+          <article className="mt-10 rounded-3xl border border-white/15 bg-navy-950/50 p-6 sm:p-9">
+            <div className="mx-auto max-w-4xl">
               <div className="kicker">Celebrity perspective</div>
               <h3 className="mt-3 font-display text-3xl text-silver-100">Access can spark curiosity. Evidence guides the decision.</h3>
-              <p className="mt-4 text-base leading-relaxed text-silver-200">Elite athletes and celebrities often have resources for specialist advice, training, and wellness products that many people cannot easily access. Seeing their choices can prompt useful questions about our own routines.</p>
-              <p className="mt-4 text-base leading-relaxed text-silver-200">The presentation explores that perspective. A celebrity’s appearance in a collage does not establish current use, endorsement, or a health benefit. Access and popularity alone cannot tell us which choices improve health; that requires research.</p>
+              <p className="mt-4 text-base leading-relaxed text-silver-200">The presentation&apos;s core message was simple: elite athletes and celebrities often have access to specialist advice, intensive training, recovery support, and wellness products that many people do not. Their choices can spark curiosity and encourage us to ask better questions about hydration and recovery.</p>
+              <p className="mt-4 text-base leading-relaxed text-silver-200">But visibility is not validation. A person’s appearance in a promotional gallery does not establish current use, a paid endorsement, or a health benefit. Popularity can begin the conversation; controlled research must guide any conclusion.</p>
               <p className="mt-4 text-sm text-silver-300">The external gallery includes figures such as Manny Pacquiao, Floyd Mayweather, Steven Tyler, and Pat Boone. These are the gallery publisher’s reports, not independently verified endorsements.</p>
               <a href="https://newtritionny.com/kangen-water-celebrities" target="_blank" rel="noopener noreferrer" className="mt-5 inline-block text-aqua-200 underline underline-offset-4">See the full list of professional athletes and celebrities →</a>
               <p className="mt-2 text-sm text-silver-400">External promotional gallery; its claims are separate from the research reviewed here.</p>

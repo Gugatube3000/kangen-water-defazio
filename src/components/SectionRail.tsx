@@ -56,9 +56,13 @@ export function SectionRail() {
   if (sections.length < 2) return null;
 
   const scrollTo = (el: HTMLElement) => {
-    const top =
-      el.getBoundingClientRect().top + window.scrollY - 80;
-    window.scrollTo({ top, behavior: "smooth" });
+    const chapter = el.closest<HTMLDetailsElement>("details.mobile-chapter");
+    if (chapter && !chapter.open) chapter.open = true;
+
+    window.requestAnimationFrame(() => {
+      const top = el.getBoundingClientRect().top + window.scrollY - 80;
+      window.scrollTo({ top, behavior: "smooth" });
+    });
   };
 
   return (

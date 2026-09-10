@@ -23,20 +23,22 @@ import { Reveal } from "@/components/Reveal";
 import { ChapterTransition } from "@/components/ChapterTransition";
 import { CellularRespiration } from "@/sections/CellularRespiration";
 import { MobileChapter } from "@/components/MobileChapter";
+import { CellularConditions } from "@/sections/CellularConditions";
+import { MolecularHydrogenBridge } from "@/sections/MolecularHydrogenBridge";
 
 export default function Home() {
   return (
     <>
       <Hero />
-      <div className="px-5 pb-4 pt-7 md:hidden">
-        <div className="mx-auto max-w-xl">
-          <div className="kicker">Choose your depth</div>
-          <h2 className="mt-3 font-display text-3xl leading-tight text-silver-100">
-            A shorter path on your phone.
+      <div className="px-5 pb-6 pt-7 md:px-10 md:pb-9 md:pt-12 lg:px-16">
+        <div className="mx-auto max-w-7xl">
+          <div className="kicker">Choose your path</div>
+          <h2 className="mt-3 max-w-3xl font-display text-3xl leading-tight text-silver-100 md:text-5xl">
+            Scroll the topics. Expand what interests you.
           </h2>
-          <p className="mt-3 text-sm leading-relaxed text-silver-300/78">
-            Open only the chapters you want. Every source, diagram, and detailed
-            explanation is still here.
+          <p className="mt-3 max-w-2xl text-sm leading-relaxed text-silver-300/78 md:text-base">
+            On a phone, laptop, or desktop, open only the chapters you want.
+            Every source, diagram, and detailed explanation remains available.
           </p>
         </div>
       </div>
@@ -97,6 +99,7 @@ export default function Home() {
         title="Oxidation and molecular hydrogen"
         summary="Understand free radicals, redox balance, and what hydrogen research can—and cannot—show."
       >
+        <CellularConditions />
         <ChapterTransition
           next="Oxidative balance"
           quote="Life exists in the balance between challenge and repair. Too little stress prevents adaptation. Too much stress overwhelms resilience."
@@ -109,6 +112,7 @@ export default function Home() {
           quote="Some of the most fascinating discoveries in science occur when we realize that something we considered simple may be far more complex than we imagined."
           attribution="Dr. David De Fazio · Molecular Hydrogen Master Guide"
         />
+        <MolecularHydrogenBridge />
         <CuriosityPreface />
         <MolecularHydrogen />
         <HydrogenDelivery />

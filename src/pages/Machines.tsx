@@ -11,6 +11,7 @@ import { WhatIsKangen } from "@/sections/WhatIsKangen";
 import { VideoClips } from "@/sections/VideoClips";
 import { OTHER_MACHINES_MAILTO } from "@/lib/motion";
 import { MobileChapter } from "@/components/MobileChapter";
+import { PrioritiesClip } from "@/sections/PrioritiesClip";
 
 export default function Machines() {
   return (
@@ -47,9 +48,9 @@ export default function Machines() {
         </div>
       </section>
 
-      <div className="px-5 pb-4 md:hidden">
-        <p className="mx-auto max-w-xl text-sm leading-relaxed text-silver-300/75">
-          Open the details that matter to your household and budget.
+      <div className="px-5 pb-6 md:px-10 md:pb-9 lg:px-16">
+        <p className="mx-auto max-w-7xl text-sm leading-relaxed text-silver-300/75 md:text-base">
+          Scroll the topics and expand the details that matter to your household and budget.
         </p>
       </div>
 
@@ -74,6 +75,7 @@ export default function Machines() {
         summary="See the kitchen system, published price, deposit, payment schedule, and costs that remain separate."
       >
         <MeetMachines />
+        <PrioritiesClip />
         <PaymentOptions />
       </MobileChapter>
       <MobileChapter

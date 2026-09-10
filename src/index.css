@@ -225,38 +225,40 @@ body {
   }
 }
 
+.mobile-chapter {
+  display: block;
+  padding: 0.4rem 1.25rem;
+  scroll-margin-top: 5.5rem;
+}
+
+.mobile-chapter-summary {
+  display: block;
+  max-width: 80rem;
+  margin-inline: auto;
+  cursor: pointer;
+  list-style: none;
+  border: 1px solid rgba(164, 231, 240, 0.16);
+  border-radius: 1.25rem;
+  background: linear-gradient(135deg, rgba(31, 48, 92, 0.72), rgba(14, 26, 54, 0.58));
+  padding: 1.25rem;
+  box-shadow: 0 16px 45px rgba(2, 12, 26, 0.2);
+  -webkit-tap-highlight-color: transparent;
+}
+
+.mobile-chapter-summary::-webkit-details-marker {
+  display: none;
+}
+
+.mobile-chapter[open] > .mobile-chapter-summary {
+  border-color: rgba(111, 215, 230, 0.34);
+  background: linear-gradient(135deg, rgba(31, 62, 99, 0.78), rgba(14, 26, 54, 0.7));
+}
+
+.mobile-chapter[open] .mobile-chapter-chevron {
+  transform: rotate(45deg);
+}
+
 @media (max-width: 767px) {
-  .mobile-chapter {
-    display: block;
-    padding: 0.4rem 1.25rem;
-    scroll-margin-top: 5.5rem;
-  }
-
-  .mobile-chapter-summary {
-    display: block;
-    cursor: pointer;
-    list-style: none;
-    border: 1px solid rgba(164, 231, 240, 0.16);
-    border-radius: 1.25rem;
-    background: linear-gradient(135deg, rgba(31, 48, 92, 0.72), rgba(14, 26, 54, 0.58));
-    padding: 1.25rem;
-    box-shadow: 0 16px 45px rgba(2, 12, 26, 0.2);
-    -webkit-tap-highlight-color: transparent;
-  }
-
-  .mobile-chapter-summary::-webkit-details-marker {
-    display: none;
-  }
-
-  .mobile-chapter[open] > .mobile-chapter-summary {
-    border-color: rgba(111, 215, 230, 0.34);
-    background: linear-gradient(135deg, rgba(31, 62, 99, 0.78), rgba(14, 26, 54, 0.7));
-  }
-
-  .mobile-chapter[open] .mobile-chapter-chevron {
-    transform: rotate(45deg);
-  }
-
   .mobile-chapter-body {
     margin-inline: -1.25rem;
   }
@@ -335,12 +337,13 @@ body {
 }
 
 @media (min-width: 768px) {
-  .mobile-chapter > summary {
-    display: none;
+  .mobile-chapter {
+    padding: 0.65rem 2.5rem;
   }
 
-  .mobile-chapter:not([open]) > .mobile-chapter-body {
-    display: block !important;
+  .mobile-chapter-summary {
+    border-radius: 1.5rem;
+    padding: 1.5rem 1.75rem;
   }
 
   .reference-topic:not([open]) > .reference-topic-body {

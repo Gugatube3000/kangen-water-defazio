@@ -9,10 +9,7 @@ type MobileChapterProps = {
   className?: string;
 };
 
-/**
- * Progressive disclosure for long-form mobile reading. The wrapper becomes
- * transparent at tablet widths so the desktop narrative is unchanged.
- */
+/** Progressive disclosure for long-form reading on every screen size. */
 export function MobileChapter({
   number,
   title,
@@ -21,15 +18,9 @@ export function MobileChapter({
   className,
 }: MobileChapterProps) {
   const detailsRef = useRef<HTMLDetailsElement>(null);
-  const [open, setOpen] = useState(() =>
-    typeof window !== "undefined"
-      ? window.matchMedia("(min-width: 768px)").matches
-      : true,
-  );
+  const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const desktopQuery = window.matchMedia("(min-width: 768px)");
-    const syncViewport = (event: MediaQueryListEvent) => setOpen(event.matches);
     const revealHashTarget = () => {
       if (!window.location.hash || !detailsRef.current) return;
       const id = decodeURIComponent(window.location.hash.slice(1));
@@ -45,10 +36,8 @@ export function MobileChapter({
     };
 
     revealHashTarget();
-    desktopQuery.addEventListener("change", syncViewport);
     window.addEventListener("hashchange", revealHashTarget);
     return () => {
-      desktopQuery.removeEventListener("change", syncViewport);
       window.removeEventListener("hashchange", revealHashTarget);
     };
   }, []);
@@ -79,8 +68,8 @@ export function MobileChapter({
           </span>
         </span>
         <span className="mt-4 inline-flex items-center gap-2 pl-8 text-xs font-semibold uppercase tracking-[0.16em] text-aqua-200">
-          <span className="group-open:hidden">Open chapter</span>
-          <span className="hidden group-open:inline">Close chapter</span>
+            <span className="group-open:hidden">Explore topic</span>
+            <span className="hidden group-open:inline">Collapse topic</span>
           <span aria-hidden>→</span>
         </span>
       </summary>
