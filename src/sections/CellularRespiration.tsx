@@ -68,7 +68,7 @@ export function CellularRespiration({ compactIntro = false }: CellularRespiratio
                     Dr. Jerry Tennant uses a memorable chain—electrical potential → cellular function → energy → repair—to connect bioelectricity with health. It is a useful prompt for exploring cell biology, but the whole-body disease framework and his specific voltage thresholds are <strong className="text-silver-100">Tennant’s proposed model</strong>, not universal clinical reference ranges. <Cite ids={61} />
                   </p>
                   <a
-                    href="https://www.youtube.com/watch?v=e9CabCf0jB0&t=460s"
+                    href="https://www.youtube.com/watch?v=e9CabCf0jB0&t=460s&cc_load_policy=1&cc_lang_pref=en&hl=en"
                     target="_blank"
                     rel="noreferrer"
                     className="mt-5 inline-flex items-center gap-2 text-xs font-semibold uppercase tracking-[.14em] text-aqua-200 transition hover:text-aqua-100"
